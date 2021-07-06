@@ -7,6 +7,7 @@ VERSION:	Versoin Number
 /*------------------------------------------------------------------
 [TABLE OF CONTENTS]
 -------------------------------------------------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif&display=swap");
 /*  typography */
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700");
 @font-face {
@@ -17,7 +18,7 @@ VERSION:	Versoin Number
 
 body {
   line-height: 1.2;
-  font-family: "Poppins", sans-serif;
+  font-family: "PT Serif";
   -webkit-font-smoothing: antialiased;
   font-size: 15px;
   color: #000000c0; }
@@ -27,11 +28,11 @@ p, .paragraph {
   color: #000000c0;
   font-size: 15px;
   line-height: 1.9;
-  font-family: "Poppins", sans-serif; }
+  font-family: "PT Serif"; }
 
 h1, h2, h3, h4, h5, h6 {
   color: #1e1e4b;
-  font-family: "futura-bold";
+  font-family: "PT Serif";
   font-weight: 700;
   line-height: 1.2; }
 
@@ -68,7 +69,7 @@ h6, .h6 {
 /* Button style */
 .btn {
   font-size: 16px;
-  font-family: "Poppins", sans-serif;
+  font-family: "PT Serif";
   text-transform: capitalize;
   padding: 15px 40px;
   border-radius: 0;
@@ -267,7 +268,7 @@ a h4:hover {
   color: #1e1e4b !important; }
 
 .font-secondary {
-  font-family: "futura-bold"; }
+  font-family: "PT Serif"; }
 
 .mb-10 {
   margin-bottom: 10px !important; }
@@ -551,7 +552,7 @@ link:focus,
   color: #1e1e4b;
   transition: .2s ease;
   text-transform: capitalize;
-  font-family: "Poppins", sans-serif; }
+  font-family: "PT Serif"; }
   @media (max-width: 991px) {
     .navbar .dropdown-item {
       text-align: center; } }
@@ -712,7 +713,7 @@ link:focus,
 .card-date {
   position: absolute;
   background: #162249f5;
-  font-family: "futura-bold";
+  font-family: "PT Serif";
   text-align: center;
   padding: 10px;
   color: #fff;

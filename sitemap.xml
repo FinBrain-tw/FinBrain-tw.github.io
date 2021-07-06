@@ -26,6 +26,12 @@
     <loc>https://finbrain-tw.github.io/event/event-6/</loc>
     <lastmod>2030-03-09T15:27:17+06:00</lastmod>
   </url><url>
+    <loc>https://finbrain-tw.github.io/course/env-packages/</loc>
+    <lastmod>2021-07-01T15:27:17+08:00</lastmod>
+  </url><url>
+    <loc>https://finbrain-tw.github.io/course/</loc>
+    <lastmod>2021-07-01T15:27:17+08:00</lastmod>
+  </url><url>
     <loc>https://finbrain-tw.github.io/tags/advice/</loc>
     <lastmod>2019-07-06T15:27:17+06:00</lastmod>
   </url><url>
@@ -107,9 +113,6 @@
     <loc>https://finbrain-tw.github.io/course/course-4/</loc>
     <lastmod>2019-07-06T15:27:17+06:00</lastmod>
   </url><url>
-    <loc>https://finbrain-tw.github.io/blog/</loc>
-    <lastmod>2019-07-06T15:27:17+06:00</lastmod>
-  </url><url>
     <loc>https://finbrain-tw.github.io/course/course-2/</loc>
     <lastmod>2019-07-06T15:27:17+06:00</lastmod>
   </url><url>
@@ -117,9 +120,6 @@
     <lastmod>2019-07-06T15:27:17+06:00</lastmod>
   </url><url>
     <loc>https://finbrain-tw.github.io/notice/</loc>
-    <lastmod>2019-07-06T15:27:17+06:00</lastmod>
-  </url><url>
-    <loc>https://finbrain-tw.github.io/course/</loc>
     <lastmod>2019-07-06T15:27:17+06:00</lastmod>
   </url><url>
     <loc>https://finbrain-tw.github.io/research/</loc>
@@ -152,12 +152,8 @@
     <loc>https://finbrain-tw.github.io/notice/notice-6/</loc>
     <lastmod>2019-07-06T15:27:17+06:00</lastmod>
   </url><url>
-    <loc>https://finbrain-tw.github.io/course/course-6/</loc>
+    <loc>https://finbrain-tw.github.io/blog/</loc>
     <lastmod>2019-07-06T15:27:17+06:00</lastmod>
-  </url><url>
-    <loc>https://finbrain-tw.github.io/about/</loc>
-  </url><url>
-    <loc>https://finbrain-tw.github.io/contact/</loc>
   </url><url>
     <loc>https://finbrain-tw.github.io/teacher/alex-rook/</loc>
   </url><url>
@@ -173,18 +169,22 @@
   </url><url>
     <loc>https://finbrain-tw.github.io/teacher/devid-luis/</loc>
   </url><url>
-    <loc>https://finbrain-tw.github.io/teacher/duis-rio/</loc>
-  </url><url>
     <loc>https://finbrain-tw.github.io/teacher/jacke-mastio/</loc>
   </url><url>
     <loc>https://finbrain-tw.github.io/author/john-doe/</loc>
   </url><url>
     <loc>https://finbrain-tw.github.io/author/mark-dinn/</loc>
   </url><url>
+    <loc>https://finbrain-tw.github.io/teacher/oscar-chen/</loc>
+  </url><url>
     <loc>https://finbrain-tw.github.io/teacher/</loc>
   </url><url>
     <loc>https://finbrain-tw.github.io/scholarship/</loc>
   </url><url>
     <loc>https://finbrain-tw.github.io/teacher/zim-cook/</loc>
+  </url><url>
+    <loc>https://finbrain-tw.github.io/about/</loc>
+  </url><url>
+    <loc>https://finbrain-tw.github.io/contact/</loc>
   </url>
 </urlset>

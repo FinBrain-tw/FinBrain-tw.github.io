@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Our Courses on FinBrain-tw | Stock Predictions with python</title>
+    <title>用Python打造專屬投資策略 on FinBrain-tw | Stock Predictions with python</title>
     <link>https://finbrain-tw.github.io/course/</link>
-    <description>Recent content in Our Courses on FinBrain-tw | Stock Predictions with python</description>
+    <description>Recent content in 用Python打造專屬投資策略 on FinBrain-tw | Stock Predictions with python</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>COPYRIGHT © 2021 FinBrain-TW. ALL RIGHTS RESERVED.</copyright>
-    <lastBuildDate>Sat, 06 Jul 2019 15:27:17 +0600</lastBuildDate><atom:link href="https://finbrain-tw.github.io/course/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>COPYRIGHT © 2021 FinBrain-tw. ALL RIGHTS RESERVED.</copyright>
+    <lastBuildDate>Thu, 01 Jul 2021 15:27:17 +0800</lastBuildDate><atom:link href="https://finbrain-tw.github.io/course/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何架設Python環境</title>
+      <link>https://finbrain-tw.github.io/course/env-packages/</link>
+      <pubDate>Thu, 01 Jul 2021 15:27:17 +0800</pubDate>
+      
+      <guid>https://finbrain-tw.github.io/course/env-packages/</guid>
+      <description>安裝miniconda   選擇版本安裝   開啟anaconda prompt 輸入 conda install jupyterlab   點選settings ➜ Advanced Settings Editor ➜ 選擇Notebook ➜ 複製Defaults ➜ 將lineNumbers改成true   .</description>
+    </item>
+    
     <item>
       <title>Algorithm</title>
       <link>https://finbrain-tw.github.io/course/course-5/</link>
@@ -50,15 +59,6 @@
       <pubDate>Sat, 06 Jul 2019 15:27:17 +0600</pubDate>
       
       <guid>https://finbrain-tw.github.io/course/course-1/</guid>
-      <description>About Course Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
-    </item>
-    
-    <item>
-      <title>Vlogging</title>
-      <link>https://finbrain-tw.github.io/course/course-6/</link>
-      <pubDate>Sat, 06 Jul 2019 15:27:17 +0600</pubDate>
-      
-      <guid>https://finbrain-tw.github.io/course/course-6/</guid>
       <description>About Course Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
     </item>
     

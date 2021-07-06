@@ -6,7 +6,7 @@
     <description>Recent content on FinBrain-tw | Stock Predictions with python</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>COPYRIGHT © 2021 FinBrain-TW. ALL RIGHTS RESERVED.</copyright>
+    <copyright>COPYRIGHT © 2021 FinBrain-tw. ALL RIGHTS RESERVED.</copyright>
     <lastBuildDate>Sat, 09 Mar 2030 15:27:17 +0600</lastBuildDate><atom:link href="https://finbrain-tw.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Social media and behavior economics conference</title>
@@ -60,6 +60,15 @@
       
       <guid>https://finbrain-tw.github.io/event/event-6/</guid>
       <description>About Event Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
+    </item>
+    
+    <item>
+      <title>如何架設Python環境</title>
+      <link>https://finbrain-tw.github.io/course/env-packages/</link>
+      <pubDate>Thu, 01 Jul 2021 15:27:17 +0800</pubDate>
+      
+      <guid>https://finbrain-tw.github.io/course/env-packages/</guid>
+      <description>安裝miniconda   選擇版本安裝   開啟anaconda prompt 輸入 conda install jupyterlab   點選settings ➜ Advanced Settings Editor ➜ 選擇Notebook ➜ 複製Defaults ➜ 將lineNumbers改成true   .</description>
     </item>
     
     <item>
@@ -270,15 +279,6 @@
     </item>
     
     <item>
-      <title>Vlogging</title>
-      <link>https://finbrain-tw.github.io/course/course-6/</link>
-      <pubDate>Sat, 06 Jul 2019 15:27:17 +0600</pubDate>
-      
-      <guid>https://finbrain-tw.github.io/course/course-6/</guid>
-      <description>About Course Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
-    </item>
-    
-    <item>
       <title>Alex Rook</title>
       <link>https://finbrain-tw.github.io/teacher/alex-rook/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -333,15 +333,6 @@
     </item>
     
     <item>
-      <title>Duis Rio</title>
-      <link>https://finbrain-tw.github.io/teacher/duis-rio/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://finbrain-tw.github.io/teacher/duis-rio/</guid>
-      <description>About Me Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
-    </item>
-    
-    <item>
       <title>Jacke Mastio</title>
       <link>https://finbrain-tw.github.io/teacher/jacke-mastio/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -366,6 +357,17 @@
       
       <guid>https://finbrain-tw.github.io/author/mark-dinn/</guid>
       <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet vulputate augue.</description>
+    </item>
+    
+    <item>
+      <title>Oscar Chen</title>
+      <link>https://finbrain-tw.github.io/teacher/oscar-chen/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://finbrain-tw.github.io/teacher/oscar-chen/</guid>
+      <description>About Me 哈囉大家好!我是FinBrain創辦人，專業領域為金融量化分析。
+為什麼會創辦FinBrain呢?因為在大二時開始進行投資，當初的我對於投資一知半解，跟著報牌群組一起買賣，結果股價下殺後再度攤平，最後認賠殺出，從那之後開始專研技術面、量化分析，在2021年開始按照分析結果進行投資，也陸續獲得不錯的報酬率。
+所以我希望能將一路上所得到的投資經驗和專業知識透過有系統的課程方式教導對於量化投資有高度熱忱的投資人!</description>
     </item>
     
     <item>
