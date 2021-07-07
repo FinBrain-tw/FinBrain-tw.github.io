@@ -63,21 +63,30 @@
     </item>
     
     <item>
+      <title>Python網頁爬蟲教學</title>
+      <link>https://finbrain-tw.github.io/course/crawler/</link>
+      <pubDate>Sat, 03 Jul 2021 15:27:17 +0800</pubDate>
+      
+      <guid>https://finbrain-tw.github.io/course/crawler/</guid>
+      <description>網頁的差異    index 靜態網頁 動態網頁     原理 純粹使用HTML、CSS做出的單獨網頁檔案 透過javaScript非同步的方式去跟伺服器資料庫索取資料   優點 技術成分簡單，載入速度快 可因應不同需求展現內容、頁面管理較有效率不需要reload   缺點 無法因應不同需求展現不同內容 技術上較為複雜，載入速度中等   範例 cartlidgesqualitymeats.</description>
+    </item>
+    
+    <item>
+      <title>Python快速入門</title>
+      <link>https://finbrain-tw.github.io/course/python-basic/</link>
+      <pubDate>Fri, 02 Jul 2021 15:27:17 +0800</pubDate>
+      
+      <guid>https://finbrain-tw.github.io/course/python-basic/</guid>
+      <description>程式語言的差異    index 低等語言 (Low Level) 高等語言 (High Level)     距離Hardware 近 遠   執行方式 編譯式(compiled) 直譯式 (interpreted)   執行過程 執行前翻譯成更低階語言 執行時透過直譯器解讀程式碼   開發效率 困難繁瑣 簡單快速   執行速度 快 慢   程式語言 C+ Python       Python 優勢     程式碼簡單，功能強大   介面自由度高   適合大數據分析   機器學習、深度學習    .</description>
+    </item>
+    
+    <item>
       <title>如何架設Python環境</title>
       <link>https://finbrain-tw.github.io/course/env-packages/</link>
       <pubDate>Thu, 01 Jul 2021 15:27:17 +0800</pubDate>
       
       <guid>https://finbrain-tw.github.io/course/env-packages/</guid>
       <description>安裝miniconda   選擇版本安裝   開啟anaconda prompt 輸入 conda install jupyterlab   點選settings ➜ Advanced Settings Editor ➜ 選擇Notebook ➜ 複製Defaults ➜ 將lineNumbers改成true   .</description>
-    </item>
-    
-    <item>
-      <title>Algorithm</title>
-      <link>https://finbrain-tw.github.io/course/course-5/</link>
-      <pubDate>Sat, 06 Jul 2019 15:27:17 +0600</pubDate>
-      
-      <guid>https://finbrain-tw.github.io/course/course-5/</guid>
-      <description>About Course Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
     </item>
     
     <item>
@@ -195,15 +204,6 @@
       
       <guid>https://finbrain-tw.github.io/research/research-6/</guid>
       <description>About Research Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
-    </item>
-    
-    <item>
-      <title>JavaScript</title>
-      <link>https://finbrain-tw.github.io/course/course-4/</link>
-      <pubDate>Sat, 06 Jul 2019 15:27:17 +0600</pubDate>
-      
-      <guid>https://finbrain-tw.github.io/course/course-4/</guid>
-      <description>About Course Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
     </item>
     
     <item>
