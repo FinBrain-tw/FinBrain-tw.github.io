@@ -292,9 +292,7 @@
 <span style="color:#75715e">#json改成csv</span>
 url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://www.twse.com.tw/exchangeReport/MI_INDEX?response=json&amp;date=20210707&amp;type=ALLBUT0999&amp;_=1625637146126&#39;</span>
 
-headers <span style="color:#f92672">=</span> {
-    <span style="color:#e6db74">&#39;User-Agent&#39;</span>: <span style="color:#e6db74">&#39;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36&#39;</span>
-}
+headers <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;User-Agent&#39;</span>: <span style="color:#e6db74">&#39;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36&#39;</span>}
 
 res <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>get(url,headers<span style="color:#f92672">=</span>headers)
 </code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> io
@@ -320,9 +318,7 @@ df
 
 url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://mops.twse.com.tw/mops/web/ajax_t51sb01&#39;</span>
 
-headers <span style="color:#f92672">=</span> {
-    <span style="color:#e6db74">&#39;User-Agent&#39;</span>: <span style="color:#e6db74">&#39;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36&#39;</span>
-}
+headers <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;User-Agent&#39;</span>: <span style="color:#e6db74">&#39;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36&#39;</span>}
 
 <span style="color:#75715e"># Form Data</span>
 payload <span style="color:#f92672">=</span> {
@@ -347,9 +343,7 @@ df
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> requests
 
 url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://www.taifex.com.tw/cht/3/futContractsDate&#39;</span>
-headers <span style="color:#f92672">=</span> {
-    <span style="color:#e6db74">&#39;User-Agent&#39;</span>: <span style="color:#e6db74">&#39;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36&#39;</span>
-}
+headers <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;User-Agent&#39;</span>: <span style="color:#e6db74">&#39;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36&#39;</span>}
 
 payload <span style="color:#f92672">=</span> {
     <span style="color:#e6db74">&#39;queryDate&#39;</span>: <span style="color:#e6db74">&#39;2021/07/05&#39;</span>
@@ -379,9 +373,7 @@ df<span style="color:#f92672">.</span>loc[df<span style="color:#f92672">.</span>
 <span style="color:#f92672">import</span> datetime
 
 url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://www.taifex.com.tw/cht/3/futAndOptDateDown&#39;</span>
-headers <span style="color:#f92672">=</span> {
-    <span style="color:#e6db74">&#39;User-Agent&#39;</span>: <span style="color:#e6db74">&#39;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36&#39;</span>
-}
+headers <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;User-Agent&#39;</span>: <span style="color:#e6db74">&#39;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36&#39;</span>}
 
 end_date <span style="color:#f92672">=</span> datetime<span style="color:#f92672">.</span>date(<span style="color:#ae81ff">2010</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">23</span>)
 start_date <span style="color:#f92672">=</span> end_date<span style="color:#f92672">-</span>datetime<span style="color:#f92672">.</span>timedelta(<span style="color:#ae81ff">360</span><span style="color:#f92672">*</span><span style="color:#ae81ff">3</span>)
@@ -414,9 +406,7 @@ df
 
 url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://goodinfo.tw/StockInfo/EquityDistributionClassHis.asp?STOCK_ID=2330&#39;</span>
 
-headers <span style="color:#f92672">=</span> {
-    <span style="color:#e6db74">&#39;User-Agent&#39;</span>: <span style="color:#e6db74">&#39;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36&#39;</span>
-}
+headers <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;User-Agent&#39;</span>: <span style="color:#e6db74">&#39;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36&#39;</span>}
 
 res <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>get(url,headers<span style="color:#f92672">=</span>headers)
 </code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">res<span style="color:#f92672">.</span>encoding <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;utf-8&#39;</span>
@@ -443,9 +433,7 @@ df
 
 url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://ecshweb.pchome.com.tw/search/v3.3/all/results?q=Nike</span><span style="color:#e6db74">%E</span><span style="color:#e6db74">7</span><span style="color:#e6db74">%90%</span><span style="color:#e6db74">83</span><span style="color:#e6db74">%E</span><span style="color:#e6db74">9</span><span style="color:#e6db74">%9E</span><span style="color:#e6db74">%8B&amp;page=1&amp;sort=sale/dc&#39;</span>
 
-headers <span style="color:#f92672">=</span> {
-    <span style="color:#e6db74">&#39;User-Agent&#39;</span>: <span style="color:#e6db74">&#39;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36&#39;</span>
-}
+headers <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;User-Agent&#39;</span>: <span style="color:#e6db74">&#39;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36&#39;</span>}
 
 res <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>get(url,headers<span style="color:#f92672">=</span>headers)
 </code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">products <span style="color:#f92672">=</span> {}
@@ -468,9 +456,7 @@ df
 
 url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://tw.stock.yahoo.com/q/h?s=2609&#39;</span>
 
-headers <span style="color:#f92672">=</span> {
-    <span style="color:#e6db74">&#39;User-Agent&#39;</span>: <span style="color:#e6db74">&#39;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36&#39;</span>
-}
+headers <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;User-Agent&#39;</span>: <span style="color:#e6db74">&#39;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36&#39;</span>}
 
 res <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>get(url,headers<span style="color:#f92672">=</span>headers)
 </code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">from</span> bs4 <span style="color:#f92672">import</span> BeautifulSoup
@@ -574,6 +560,21 @@ t<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39;</sp
       
       <div class="col-lg-4 col-sm-6 mb-5">
         <div class="card p-0 border-primary rounded-0 hover-shadow">
+  <img class="card-img-top rounded-0" src="/images/courses/course-1.jpg" alt="Photography">
+  <div class="card-body">
+    <ul class="list-inline mb-2">
+      <li class="list-inline-item"><i class="ti-calendar"></i> 06 Month</li>
+      <li class="list-inline-item"><i class="ti-bookmark-alt"></i> Photography</li>
+    </ul>
+    <h4 class="card-title"><a href="https://finbrain-tw.github.io/course/course-1/">Photography</a></h4>
+    <p class="card-text mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut …</p>
+    <a href="https://finbrain-tw.github.io/course/course-1/" class="btn btn-primary btn-sm">Apply now</a>
+  </div>
+</div>
+      </div>
+      
+      <div class="col-lg-4 col-sm-6 mb-5">
+        <div class="card p-0 border-primary rounded-0 hover-shadow">
   <img class="card-img-top rounded-0" src="/images/courses/env-packages.png" alt="如何架設Python環境">
   <div class="card-body">
     <ul class="list-inline mb-2">
@@ -589,30 +590,15 @@ t<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39;</sp
       
       <div class="col-lg-4 col-sm-6 mb-5">
         <div class="card p-0 border-primary rounded-0 hover-shadow">
-  <img class="card-img-top rounded-0" src="/images/courses/course-2.jpg" alt="Mathematics">
-  <div class="card-body">
-    <ul class="list-inline mb-2">
-      <li class="list-inline-item"><i class="ti-calendar"></i> 06 Month</li>
-      <li class="list-inline-item"><i class="ti-bookmark-alt"></i> Mathematics</li>
-    </ul>
-    <h4 class="card-title"><a href="https://finbrain-tw.github.io/course/course-2/">Mathematics</a></h4>
-    <p class="card-text mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut …</p>
-    <a href="https://finbrain-tw.github.io/course/course-2/" class="btn btn-primary btn-sm">Apply now</a>
-  </div>
-</div>
-      </div>
-      
-      <div class="col-lg-4 col-sm-6 mb-5">
-        <div class="card p-0 border-primary rounded-0 hover-shadow">
-  <img class="card-img-top rounded-0" src="/images/courses/database.png" alt="建立專屬資料庫">
+  <img class="card-img-top rounded-0" src="/images/courses/python-basic.png" alt="Python快速入門">
   <div class="card-body">
     <ul class="list-inline mb-2">
       <li class="list-inline-item"><i class="ti-calendar"></i> 06 Month</li>
       <li class="list-inline-item"><i class="ti-bookmark-alt"></i> Python</li>
     </ul>
-    <h4 class="card-title"><a href="https://finbrain-tw.github.io/course/database/">建立專屬資料庫</a></h4>
-    <p class="card-text mb-4">認識資料庫型態&amp;爬蟲自動化</p>
-    <a href="https://finbrain-tw.github.io/course/database/" class="btn btn-primary btn-sm">Apply now</a>
+    <h4 class="card-title"><a href="https://finbrain-tw.github.io/course/python-basic/">Python快速入門</a></h4>
+    <p class="card-text mb-4">Python基礎語法 &amp; Pandas應用</p>
+    <a href="https://finbrain-tw.github.io/course/python-basic/" class="btn btn-primary btn-sm">Apply now</a>
   </div>
 </div>
       </div>

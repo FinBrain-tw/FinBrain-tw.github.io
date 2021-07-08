@@ -253,9 +253,7 @@ date <span style="color:#f92672">=</span> datetime<span style="color:#f92672">.<
 <span style="color:#75715e">#json改成csv</span>
 url <span style="color:#f92672">=</span> f<span style="color:#e6db74">&#34;https://www.twse.com.tw/exchangeReport/MI_INDEX?response=csv&amp;date={date.strftime(&#39;%Y%m</span><span style="color:#e6db74">%d</span><span style="color:#e6db74">&#39;)}&amp;type=ALLBUT0999&amp;_=1625708869489&#34;</span>
 
-headers <span style="color:#f92672">=</span> {
-    <span style="color:#e6db74">&#39;User-Agent&#39;</span>: <span style="color:#e6db74">&#39;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36&#39;</span>
-}
+headers <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;User-Agent&#39;</span>: <span style="color:#e6db74">&#39;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36&#39;</span>}
 
 res <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>get(url,headers<span style="color:#f92672">=</span>headers)
 </code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> io
@@ -290,7 +288,7 @@ database <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</s
 <span style="color:#66d9ef">for</span> date <span style="color:#f92672">in</span> dates:
     
     url <span style="color:#f92672">=</span> f<span style="color:#e6db74">&#34;https://www.twse.com.tw/exchangeReport/MI_INDEX?response=csv&amp;date={date.strftime(&#39;%Y%m</span><span style="color:#e6db74">%d</span><span style="color:#e6db74">&#39;)}&amp;type=ALLBUT0999&amp;_=1625708869489&#34;</span>
-    headers <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;User-Agent&#39;</span>: <span style="color:#e6db74">&#39;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36&#39;</span>}
+    headers <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;User-Agent&#39;</span>: <span style="color:#e6db74">&#39;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36&#39;</span>}
     res <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>get(url,headers<span style="color:#f92672">=</span>headers)
     
     lines <span style="color:#f92672">=</span> [line <span style="color:#66d9ef">for</span> line <span style="color:#f92672">in</span> res<span style="color:#f92672">.</span>text<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span>) <span style="color:#66d9ef">if</span> len(line<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39;,&#34;&#39;</span>))<span style="color:#f92672">&gt;=</span><span style="color:#ae81ff">12</span>]
@@ -327,9 +325,7 @@ date_otc <span style="color:#f92672">=</span> f<span style="color:#e6db74">&#34;
 <span style="color:#75715e">#htm改成csv</span>
 url <span style="color:#f92672">=</span> f<span style="color:#e6db74">&#34;https://www.tpex.org.tw/web/stock/aftertrading/otc_quotes_no1430/stk_wn1430_result.php?l=zh-tw&amp;o=csv&amp;d={date_otc}&amp;se=EW&amp;s=0,asc,0&#34;</span>
 
-headers <span style="color:#f92672">=</span> {
-    <span style="color:#e6db74">&#39;User-Agent&#39;</span>: <span style="color:#e6db74">&#39;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36&#39;</span>
-}
+headers <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;User-Agent&#39;</span>: <span style="color:#e6db74">&#39;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36&#39;</span>}
 
 res <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>get(url,headers<span style="color:#f92672">=</span>headers)
 </code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> io
@@ -370,7 +366,7 @@ database <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</s
     
     date_otc <span style="color:#f92672">=</span> f<span style="color:#e6db74">&#34;{int(date.strftime(&#39;%Y&#39;))-1911}/{date.strftime(&#39;%m&#39;)}/{date.strftime(&#39;</span><span style="color:#e6db74">%d</span><span style="color:#e6db74">&#39;)}&#34;</span>
     url <span style="color:#f92672">=</span> f<span style="color:#e6db74">&#34;https://www.tpex.org.tw/web/stock/aftertrading/otc_quotes_no1430/stk_wn1430_result.php?l=zh-tw&amp;o=csv&amp;d={date_otc}&amp;se=EW&amp;s=0,asc,0&#34;</span>
-    headers <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;User-Agent&#39;</span>: <span style="color:#e6db74">&#39;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36&#39;</span>}
+    headers <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;User-Agent&#39;</span>: <span style="color:#e6db74">&#39;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36&#39;</span>}
     res <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>get(url,headers<span style="color:#f92672">=</span>headers)
     
     lines <span style="color:#f92672">=</span> [line <span style="color:#66d9ef">for</span> line <span style="color:#f92672">in</span> res<span style="color:#f92672">.</span>text<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span>) <span style="color:#66d9ef">if</span> len(line<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39;,&#34;&#39;</span>))<span style="color:#f92672">&gt;=</span><span style="color:#ae81ff">12</span>]
@@ -418,7 +414,7 @@ database <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</s
     
     <span style="color:#75715e"># 上市爬蟲</span>
     url <span style="color:#f92672">=</span> f<span style="color:#e6db74">&#34;https://www.twse.com.tw/exchangeReport/MI_INDEX?response=csv&amp;date={date.strftime(&#39;%Y%m</span><span style="color:#e6db74">%d</span><span style="color:#e6db74">&#39;)}&amp;type=ALLBUT0999&amp;_=1625708869489&#34;</span>
-    headers <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;User-Agent&#39;</span>: <span style="color:#e6db74">&#39;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36&#39;</span>}
+    headers <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;User-Agent&#39;</span>: <span style="color:#e6db74">&#39;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36&#39;</span>}
     res <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>get(url,headers<span style="color:#f92672">=</span>headers)
 
     lines <span style="color:#f92672">=</span> [line <span style="color:#66d9ef">for</span> line <span style="color:#f92672">in</span> res<span style="color:#f92672">.</span>text<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span>) <span style="color:#66d9ef">if</span> len(line<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39;,&#34;&#39;</span>))<span style="color:#f92672">&gt;=</span><span style="color:#ae81ff">12</span>]
@@ -543,21 +539,6 @@ close
       
       <div class="col-lg-4 col-sm-6 mb-5">
         <div class="card p-0 border-primary rounded-0 hover-shadow">
-  <img class="card-img-top rounded-0" src="/images/courses/course-2.jpg" alt="Mathematics">
-  <div class="card-body">
-    <ul class="list-inline mb-2">
-      <li class="list-inline-item"><i class="ti-calendar"></i> 06 Month</li>
-      <li class="list-inline-item"><i class="ti-bookmark-alt"></i> Mathematics</li>
-    </ul>
-    <h4 class="card-title"><a href="https://finbrain-tw.github.io/course/course-2/">Mathematics</a></h4>
-    <p class="card-text mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut …</p>
-    <a href="https://finbrain-tw.github.io/course/course-2/" class="btn btn-primary btn-sm">Apply now</a>
-  </div>
-</div>
-      </div>
-      
-      <div class="col-lg-4 col-sm-6 mb-5">
-        <div class="card p-0 border-primary rounded-0 hover-shadow">
   <img class="card-img-top rounded-0" src="/images/courses/course-1.jpg" alt="Photography">
   <div class="card-body">
     <ul class="list-inline mb-2">
@@ -567,6 +548,21 @@ close
     <h4 class="card-title"><a href="https://finbrain-tw.github.io/course/course-1/">Photography</a></h4>
     <p class="card-text mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut …</p>
     <a href="https://finbrain-tw.github.io/course/course-1/" class="btn btn-primary btn-sm">Apply now</a>
+  </div>
+</div>
+      </div>
+      
+      <div class="col-lg-4 col-sm-6 mb-5">
+        <div class="card p-0 border-primary rounded-0 hover-shadow">
+  <img class="card-img-top rounded-0" src="/images/courses/env-packages.png" alt="如何架設Python環境">
+  <div class="card-body">
+    <ul class="list-inline mb-2">
+      <li class="list-inline-item"><i class="ti-calendar"></i> 06 Month</li>
+      <li class="list-inline-item"><i class="ti-bookmark-alt"></i> Python</li>
+    </ul>
+    <h4 class="card-title"><a href="https://finbrain-tw.github.io/course/env-packages/">如何架設Python環境</a></h4>
+    <p class="card-text mb-4">建立環境 &amp; 安裝套件</p>
+    <a href="https://finbrain-tw.github.io/course/env-packages/" class="btn btn-primary btn-sm">Apply now</a>
   </div>
 </div>
       </div>
