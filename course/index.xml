@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>COPYRIGHT © 2021 FinBrain-tw. ALL RIGHTS RESERVED.</copyright>
-    <lastBuildDate>Sat, 03 Jul 2021 15:27:17 +0800</lastBuildDate><atom:link href="https://finbrain-tw.github.io/course/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 04 Jul 2021 15:27:17 +0800</lastBuildDate><atom:link href="https://finbrain-tw.github.io/course/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>建立專屬資料庫</title>
+      <link>https://finbrain-tw.github.io/course/database/</link>
+      <pubDate>Sun, 04 Jul 2021 15:27:17 +0800</pubDate>
+      
+      <guid>https://finbrain-tw.github.io/course/database/</guid>
+      <description>認識資料庫    DataBase (DB) 關聯式 (Relational) 非關聯式 (Non-Relational)     類別 SQL (Structured Query Language) NoSQL   資料形式 表格型 非表格型   資料庫 MySQL / SQLite / SQL Server MongoDB    .</description>
+    </item>
+    
     <item>
       <title>Python網頁爬蟲教學</title>
       <link>https://finbrain-tw.github.io/course/crawler/</link>
@@ -33,15 +42,6 @@
       
       <guid>https://finbrain-tw.github.io/course/env-packages/</guid>
       <description>安裝miniconda   選擇版本安裝   開啟anaconda prompt 輸入 conda install jupyterlab   點選settings ➜ Advanced Settings Editor ➜ 選擇Notebook ➜ 複製Defaults ➜ 將lineNumbers改成true   .</description>
-    </item>
-    
-    <item>
-      <title>Artificial Intelligence</title>
-      <link>https://finbrain-tw.github.io/course/course-3/</link>
-      <pubDate>Sat, 06 Jul 2019 15:27:17 +0600</pubDate>
-      
-      <guid>https://finbrain-tw.github.io/course/course-3/</guid>
-      <description>About Course Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
     </item>
     
     <item>
