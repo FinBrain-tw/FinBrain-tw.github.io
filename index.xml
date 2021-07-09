@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>FinBrain-tw | 金融頭腦交易室</title>
+    <title>FinBrain-tw | 金頭腦交易室</title>
     <link>https://finbrain-tw.github.io/</link>
-    <description>Recent content on FinBrain-tw | 金融頭腦交易室</description>
+    <description>Recent content on FinBrain-tw | 金頭腦交易室</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>COPYRIGHT © 2021 FinBrain-tw. ALL RIGHTS RESERVED.</copyright>
@@ -60,6 +60,15 @@
       
       <guid>https://finbrain-tw.github.io/event/event-6/</guid>
       <description>About Event Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
+    </item>
+    
+    <item>
+      <title>Python數據視覺化</title>
+      <link>https://finbrain-tw.github.io/course/visual/</link>
+      <pubDate>Mon, 05 Jul 2021 15:27:17 +0800</pubDate>
+      
+      <guid>https://finbrain-tw.github.io/course/visual/</guid>
+      <description>matplotlib 融資融券 import pandas as pd # 讀取資料 close = pd.</description>
     </item>
     
     <item>
@@ -204,15 +213,6 @@
       
       <guid>https://finbrain-tw.github.io/research/research-6/</guid>
       <description>About Research Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
-    </item>
-    
-    <item>
-      <title>Mathematics</title>
-      <link>https://finbrain-tw.github.io/course/course-2/</link>
-      <pubDate>Sat, 06 Jul 2019 15:27:17 +0600</pubDate>
-      
-      <guid>https://finbrain-tw.github.io/course/course-2/</guid>
-      <description>About Course Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
     </item>
     
     <item>

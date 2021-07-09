@@ -69,7 +69,7 @@
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-dark p-0">
         <a class="navbar-brand" href="/"><img class="img-fluid"
-            src="https://finbrain-tw.github.io/images/logo.png" alt="FinBrain-tw | 金融頭腦交易室"></a>
+            src="https://finbrain-tw.github.io/images/logo.png" alt="FinBrain-tw | 金頭腦交易室"></a>
         <button class="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#navigation"
           aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -333,6 +333,40 @@ res <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</
 df
 </code></pre></div><p><img src="/images/courses/industry.png" alt=""></p>
 <p>.</p>
+<h3 id="當月營收爬蟲"><code>當月營收爬蟲</code></h3>
+<ul>
+<li>
+<h4 id="檢查網頁爬蟲httpsmopstwsecomtwmopswebindex--表格--pdread"><a href="https://mops.twse.com.tw/mops/web/index">檢查網頁爬蟲</a> ➜ 表格 ➜ pd.read</h4>
+</li>
+</ul>
+<p><img src="/images/courses/mops.png" alt="">
+<img src="/images/courses/rev.png" alt=""></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> requests
+
+url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://mops.twse.com.tw/server-java/FileDownLoad&#39;</span>
+headers <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;User-Agent&#39;</span>: <span style="color:#e6db74">&#39;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36&#39;</span>}
+<span style="color:#75715e"># Form Data</span>
+payload <span style="color:#f92672">=</span> {
+    <span style="color:#e6db74">&#39;step&#39;</span>: <span style="color:#e6db74">&#39;9&#39;</span>,
+    <span style="color:#e6db74">&#39;functionName&#39;</span>: <span style="color:#e6db74">&#39;show_file&#39;</span>,
+    <span style="color:#e6db74">&#39;filePath&#39;</span>: <span style="color:#e6db74">&#39;/home/html/nas/t21/sii/&#39;</span>, <span style="color:#75715e"># 上市:sii , 上櫃:otc</span>
+    <span style="color:#e6db74">&#39;fileName&#39;</span>: <span style="color:#e6db74">&#39;t21sc03_110_6.csv&#39;</span> <span style="color:#75715e"># 日期</span>
+}
+
+res <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>post(url,headers<span style="color:#f92672">=</span>headers,data<span style="color:#f92672">=</span>payload)
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> io
+<span style="color:#f92672">import</span> pandas <span style="color:#f92672">as</span> pd
+
+res<span style="color:#f92672">.</span>encoding <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;utf-8&#39;</span>
+lines <span style="color:#f92672">=</span> [line <span style="color:#66d9ef">for</span> line <span style="color:#f92672">in</span> res<span style="color:#f92672">.</span>text<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span>) <span style="color:#66d9ef">if</span> len(line<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39;,&#34;&#39;</span>))<span style="color:#f92672">&gt;=</span><span style="color:#ae81ff">0</span>]
+df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(io<span style="color:#f92672">.</span>StringIO(<span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span><span style="color:#f92672">.</span>join(lines)))<span style="color:#f92672">.</span>rename(columns<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#39;公司代號&#39;</span>:<span style="color:#e6db74">&#39;stock_id&#39;</span>})<span style="color:#f92672">.</span>set_index(<span style="color:#e6db74">&#39;stock_id&#39;</span>)
+df <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>applymap(<span style="color:#66d9ef">lambda</span> s: pd<span style="color:#f92672">.</span>to_numeric(str(s)<span style="color:#f92672">.</span>replace(<span style="color:#e6db74">&#39;,&#39;</span>,<span style="color:#e6db74">&#39;&#39;</span>),errors<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;coerce&#39;</span>))<span style="color:#f92672">.</span>dropna(axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>,how<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;all&#39;</span>)
+<span style="color:#75715e"># stock_id須改為str的type</span>
+df<span style="color:#f92672">.</span>index <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>index<span style="color:#f92672">.</span>astype(str)
+
+df
+</code></pre></div><p><img src="/images/courses/rev-crawler.png" alt=""></p>
+<p>.</p>
 <h3 id="期貨選擇權爬蟲"><code>期貨選擇權爬蟲</code></h3>
 <ul>
 <li>
@@ -560,15 +594,15 @@ t<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39;</sp
       
       <div class="col-lg-4 col-sm-6 mb-5">
         <div class="card p-0 border-primary rounded-0 hover-shadow">
-  <img class="card-img-top rounded-0" src="/images/courses/python-basic.png" alt="Python快速入門">
+  <img class="card-img-top rounded-0" src="/images/courses/database.png" alt="建立專屬資料庫">
   <div class="card-body">
     <ul class="list-inline mb-2">
       <li class="list-inline-item"><i class="ti-calendar"></i> 06 Month</li>
       <li class="list-inline-item"><i class="ti-bookmark-alt"></i> Python</li>
     </ul>
-    <h4 class="card-title"><a href="https://finbrain-tw.github.io/course/python-basic/">Python快速入門</a></h4>
-    <p class="card-text mb-4">Python基礎語法 &amp; Pandas應用</p>
-    <a href="https://finbrain-tw.github.io/course/python-basic/" class="btn btn-primary btn-sm">Apply now</a>
+    <h4 class="card-title"><a href="https://finbrain-tw.github.io/course/database/">建立專屬資料庫</a></h4>
+    <p class="card-text mb-4">認識資料庫型態&amp;爬蟲自動化</p>
+    <a href="https://finbrain-tw.github.io/course/database/" class="btn btn-primary btn-sm">Apply now</a>
   </div>
 </div>
       </div>
@@ -590,15 +624,15 @@ t<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39;</sp
       
       <div class="col-lg-4 col-sm-6 mb-5">
         <div class="card p-0 border-primary rounded-0 hover-shadow">
-  <img class="card-img-top rounded-0" src="/images/courses/database.png" alt="建立專屬資料庫">
+  <img class="card-img-top rounded-0" src="/images/courses/visual.png" alt="Python數據視覺化">
   <div class="card-body">
     <ul class="list-inline mb-2">
       <li class="list-inline-item"><i class="ti-calendar"></i> 06 Month</li>
       <li class="list-inline-item"><i class="ti-bookmark-alt"></i> Python</li>
     </ul>
-    <h4 class="card-title"><a href="https://finbrain-tw.github.io/course/database/">建立專屬資料庫</a></h4>
-    <p class="card-text mb-4">認識資料庫型態&amp;爬蟲自動化</p>
-    <a href="https://finbrain-tw.github.io/course/database/" class="btn btn-primary btn-sm">Apply now</a>
+    <h4 class="card-title"><a href="https://finbrain-tw.github.io/course/visual/">Python數據視覺化</a></h4>
+    <p class="card-text mb-4">超實用視覺化套件入門</p>
+    <a href="https://finbrain-tw.github.io/course/visual/" class="btn btn-primary btn-sm">Apply now</a>
   </div>
 </div>
       </div>
@@ -639,7 +673,7 @@ t<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39;</sp
       <div class="row">
         <div class="col-lg-4 col-sm-8 mb-5 mb-lg-0">
           
-          <a class="logo-footer" href="/"><img class="img-fluid mb-4" src="https://finbrain-tw.github.io/images/logo.png" alt="FinBrain-tw | 金融頭腦交易室"></a>
+          <a class="logo-footer" href="/"><img class="img-fluid mb-4" src="https://finbrain-tw.github.io/images/logo.png" alt="FinBrain-tw | 金頭腦交易室"></a>
           <ul class="list-unstyled">
             <li class="mb-4">Taiwan</li>
             <li class="mb-4"><a href="mailto:finbrain.tw@gmail.com">finbrain.tw@gmail.com</a></li>
@@ -693,6 +727,8 @@ t<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39;</sp
           <h4 class="text-white mb-5 text-uppercase">Courses</h4>
           <ul class="list-unstyled">
             
+            <li class="mb-3"><a class="text-color" href="https://finbrain-tw.github.io/course/visual/">Python數據視覺化</a></li>
+            
             <li class="mb-3"><a class="text-color" href="https://finbrain-tw.github.io/course/database/">建立專屬資料庫</a></li>
             
             <li class="mb-3"><a class="text-color" href="https://finbrain-tw.github.io/course/crawler/">Python網頁爬蟲教學</a></li>
@@ -700,8 +736,6 @@ t<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39;</sp
             <li class="mb-3"><a class="text-color" href="https://finbrain-tw.github.io/course/python-basic/">Python快速入門</a></li>
             
             <li class="mb-3"><a class="text-color" href="https://finbrain-tw.github.io/course/env-packages/">如何架設Python環境</a></li>
-            
-            <li class="mb-3"><a class="text-color" href="https://finbrain-tw.github.io/course/course-2/">Mathematics</a></li>
             
           </ul>
         </div>

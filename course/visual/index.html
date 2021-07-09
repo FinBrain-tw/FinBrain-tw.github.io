@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <title>Python數據視覺化</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description"
+    content="超實用視覺化套件入門">
+  
+  <meta name="author" content="Themefisher">
+  <meta name="generator" content="Hugo 0.83.1" />
+  <!-- multilingual SEO optimizations -->
+  
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://finbrain-tw.github.io/plugins/bootstrap/bootstrap.min.css">
+  
+  <link rel="stylesheet" href="https://finbrain-tw.github.io/plugins/slick/slick.css">
+  
+  <link rel="stylesheet" href="https://finbrain-tw.github.io/plugins/animate/animate.css">
+  
+  <link rel="stylesheet" href="https://finbrain-tw.github.io/plugins/venobox/venobox.css">
+  
+  <link rel="stylesheet" href="https://finbrain-tw.github.io/plugins/themify-icons/themify-icons.css">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://finbrain-tw.github.io/scss/main.61bf810b1a5e4f82b0d1b9fae97fd36c57ac7ad92f1abedcbec61627ebc5fce49d3a0e1833e500b66801da61162b87cf9cc9cc40ee46373dd0f19e9337084a04.css" integrity="sha512-Yb&#43;BCxpeT4Kw0bn66X/TbFesetkvGr7cvsYWJ&#43;vF/OSdOg4YM&#43;UAtmgB2mEWK4fPnMnMQO5GNz3Q8Z6TNwhKBA==" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://finbrain-tw.github.io/images/favicon.png" type="image/x-icon">
+  <link rel="icon" href="https://finbrain-tw.github.io/images/favicon.png" type="image/x-icon">
+
+</head><body>
+<header class="fixed-top header">
+  
+  
+  <div class="top-header py-2 bg-white">
+    <div class="container">
+      <div class="row no-gutters align-items-center">
+        <div class="col-lg-4 text-center text-lg-left">
+          <ul class="list-inline">
+            
+            <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="https://www.facebook.com/FinBrain.tw/"><i class="ti-facebook"></i></a></li>
+            
+            <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="https://www.instagram.com/FinBrain.tw/"><i class="ti-instagram"></i></a></li>
+            
+            <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="https://github.com/FinBrain-tw"><i class="ti-github"></i></a></li>
+            
+          </ul>
+        </div>
+        <div class="col-lg-8 text-center text-lg-right">
+          <ul class="list-inline">
+            <li class="list-inline-item">
+              <a class="text-color mr-3" href="tel:0975137619"><strong>CALL : </strong> 0975137619</a></li>
+            <li class="list-inline-item">
+              <a class="text-color" href="mailto:finbrain.tw@gmail.com"><strong>EMAIL : </strong> finbrain.tw@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="navigation w-100  top-hider ">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-dark p-0">
+        <a class="navbar-brand" href="/"><img class="img-fluid"
+            src="https://finbrain-tw.github.io/images/logo.png" alt="FinBrain-tw | 金頭腦交易室"></a>
+        <button class="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#navigation"
+          aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse text-center" id="navigation">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="https://finbrain-tw.github.io">Home</a>
+            </li>
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://finbrain-tw.github.io/about">關於FinBrain</a>
+            </li>
+            
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://finbrain-tw.github.io/course">Python課程</a>
+            </li>
+            
+            
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+                FinBrain API
+              </a>
+              <div class="dropdown-menu">
+                
+                <a class="dropdown-item" href="https://finbrain-tw.github.io/event">API使用教學</a>
+                
+                <a class="dropdown-item" href="https://finbrain-tw.github.io/notice">notice</a>
+                
+                <a class="dropdown-item" href="https://finbrain-tw.github.io/research">research</a>
+                
+                <a class="dropdown-item" href="https://finbrain-tw.github.io/scholarship">scholarship</a>
+                
+                <a class="dropdown-item" href="https://finbrain-tw.github.io/teacher">teacher</a>
+                
+              </div>
+            </li>
+            
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://finbrain-tw.github.io/blog">投資策略</a>
+            </li>
+            
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://finbrain-tw.github.io/contact">聯繫我們</a>
+            </li>
+            
+            
+          </ul>
+
+          
+          
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+	
+<section class="page-title-section overlay" style="background-image: url('/images/backgrounds/page-title.png'),url('/images/backgrounds/page-title.jpg');" >
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <ul class="list-inline custom-breadcrumb">
+          <li class="list-inline-item h2"><a class="text-primary font-secondary" href="https://finbrain-tw.github.io">Home</a></li>
+          <li class="list-inline-item h5"><i class="ti-angle-right text-white"></i></li>
+          <li class="list-inline-item text-white h3 font-secondary">Python數據視覺化</li>
+        </ul>
+        <p class="text-lighten">超實用視覺化套件入門</p>
+      </div>
+    </div>
+  </div>
+</section>
+	
+
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 mb-4">
+        
+        <img style="height: 500px;width: 100%;object-fit: cover;" src="/images/courses/visual.png"
+          class="img-fluid w-100">
+      </div>
+    </div>
+    
+    <div class="row align-items-center mb-5">
+      <div class="col-xl-3 order-1 col-sm-6 mb-4 mb-xl-0">
+        <h2>Python數據視覺化</h2>
+      </div>
+      <div class="col-xl-6 order-sm-3 order-xl-2 col-12 order-2">
+        <ul class="list-inline text-xl-center">
+          <li class="list-inline-item mr-4 mb-3 mb-sm-0">
+            <div class="d-flex align-items-center">
+              <i class="ti-calendar text-primary icon-md mr-2"></i>
+              <div class="text-left">
+                <h6 class="mb-0">DURATION</h6>
+                <p class="mb-0">06 Month</p>
+              </div>
+            </div>
+          </li>
+          <li class="list-inline-item mr-4 mb-3 mb-sm-0">
+            <div class="d-flex align-items-center">
+              <i class="ti-timer text-primary icon-md mr-2"></i>
+              <div class="text-left">
+                <h6 class="mb-0">WEEKLY</h6>
+                <p class="mb-0">03 hours</p>
+              </div>
+            </div>
+          </li>
+          <li class="list-inline-item mr-4 mb-3 mb-sm-0">
+            <div class="d-flex align-items-center">
+              <i class="ti-wallet text-primary icon-md mr-2"></i>
+              <div class="text-left">
+                <h6 class="mb-0">FEE</h6>
+                <p class="mb-0">From: $800</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="col-xl-3 text-sm-right text-left order-sm-2 order-3 order-xl-3 col-sm-6 mb-4 mb-xl-0">
+        <a href="#" class="btn btn-primary">Apply now</a>
+      </div>
+      
+      <div class="col-12 mt-4 order-4">
+        <div class="border-bottom border-primary"></div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-12 mb-4 content">
+        <h3 id="matplotlibhttpswwwmachinelearningpluscomplotstop-50-matplotlib-visualizations-the-master-plots-python"><a href="https://www.machinelearningplus.com/plots/top-50-matplotlib-visualizations-the-master-plots-python/"><strong>matplotlib</strong></a></h3>
+<h4 id="融資融券"><code>融資融券</code></h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> pandas <span style="color:#f92672">as</span> pd
+
+<span style="color:#75715e"># 讀取資料</span>
+close <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_pickle(<span style="color:#e6db74">&#39;https://github.com/FinBrain-tw/twstock_database/raw/main/history/close.pkl&#39;</span>)
+industry <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_pickle(<span style="color:#e6db74">&#39;https://github.com/FinBrain-tw/twstock_database/raw/main/history/industry.pkl&#39;</span>)
+margin_buy <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_pickle(<span style="color:#e6db74">&#39;https://github.com/FinBrain-tw/twstock_database/raw/main/history/margin_buy.pkl&#39;</span>)
+margin_sell <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_pickle(<span style="color:#e6db74">&#39;https://github.com/FinBrain-tw/twstock_database/raw/main/history/margin_sell.pkl&#39;</span>)
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span>  matplotlib.pyplot <span style="color:#f92672">as</span> plt
+<span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+
+<span style="color:#75715e"># 顯示中文字體</span>
+plt<span style="color:#f92672">.</span>rcParams[<span style="color:#e6db74">&#39;font.sans-serif&#39;</span>] <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Taipei Sans TC Beta&#39;</span>]
+
+<span style="color:#75715e"># 選擇股票代號</span>
+stock_id <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;2330&#39;</span>
+start_date <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;2020-12&#39;</span>
+end_date <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;2021-06&#39;</span>
+c <span style="color:#f92672">=</span> close[stock_id]<span style="color:#f92672">.</span>loc[start_date:end_date]
+
+x <span style="color:#f92672">=</span> c<span style="color:#f92672">.</span>index<span style="color:#f92672">.</span>strftime(<span style="color:#e6db74">&#39;%Y/%m/</span><span style="color:#e6db74">%d</span><span style="color:#e6db74">&#39;</span>)
+
+fig,(ax1,ax3) <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>subplots(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">25</span>,<span style="color:#ae81ff">7</span>))
+<span style="color:#66d9ef">for</span> ax,df,label <span style="color:#f92672">in</span> zip([ax1,ax3],[margin_buy[stock_id],margin_sell[stock_id]],[<span style="color:#e6db74">&#39;融資淨買超&#39;</span>,<span style="color:#e6db74">&#39;融券淨賣超&#39;</span>]):
+    
+    <span style="color:#75715e"># 畫出股價圖</span>
+    ax<span style="color:#f92672">.</span>plot(x,c,color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;tab:blue&#39;</span>,label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;股價&#39;</span>,linewidth<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>,linestyle<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;dashed&#39;</span>)
+    <span style="color:#75715e"># 建立雙y軸</span>
+    ax2 <span style="color:#f92672">=</span> ax<span style="color:#f92672">.</span>twinx()
+    ax2<span style="color:#f92672">.</span>bar(x,df<span style="color:#f92672">.</span>loc[start_date:end_date],<span style="color:#ae81ff">0.6</span>,color<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;tab:red&#39;</span><span style="color:#66d9ef">if</span> x<span style="color:#f92672">&gt;=</span><span style="color:#ae81ff">0</span> <span style="color:#66d9ef">else</span><span style="color:#e6db74">&#39;tab:green&#39;</span><span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> df<span style="color:#f92672">.</span>loc[start_date:end_date]],alpha<span style="color:#f92672">=.</span><span style="color:#ae81ff">8</span>,label<span style="color:#f92672">=</span>label)
+   
+    ax<span style="color:#f92672">.</span>set_title(f<span style="color:#e6db74">&#34;{stock_id} {industry.loc[stock_id][&#39;公司簡稱&#39;]} {label}&#34;</span>,fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">15</span>)
+    ax<span style="color:#f92672">.</span>set_xlabel(<span style="color:#e6db74">&#39;Date&#39;</span>)
+    ax<span style="color:#f92672">.</span>set_ylabel(<span style="color:#e6db74">&#39;Price&#39;</span>,fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">13</span>,color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;tab:blue&#39;</span>)
+    ax2<span style="color:#f92672">.</span>set_ylabel(label,fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">13</span>,color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;tab:red&#39;</span>)
+    ax<span style="color:#f92672">.</span>tick_params(<span style="color:#e6db74">&#39;y&#39;</span>,labelcolor<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;tab:blue&#39;</span>)
+    ax2<span style="color:#f92672">.</span>tick_params(<span style="color:#e6db74">&#39;y&#39;</span>,labelcolor<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;tab:red&#39;</span>)
+    ax<span style="color:#f92672">.</span>legend(loc<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;lower center&#39;</span>,fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">13</span>)
+    ax2<span style="color:#f92672">.</span>legend(loc<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;upper left&#39;</span>,fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">13</span>)
+    
+    <span style="color:#75715e"># x軸依比例顯示</span>
+    ax<span style="color:#f92672">.</span>set_xticks(np<span style="color:#f92672">.</span>arange(<span style="color:#ae81ff">0</span>,len(x),len(x)<span style="color:#f92672">/</span><span style="color:#ae81ff">6</span>))
+    ax<span style="color:#f92672">.</span>grid(<span style="color:#e6db74">&#39;-.&#39;</span>,alpha<span style="color:#f92672">=.</span><span style="color:#ae81ff">5</span>)
+    
+fig<span style="color:#f92672">.</span>show()
+</code></pre></div><p><img src="/images/courses/margin.png" alt=""></p>
+<h4 id="k線圖"><code>K線圖</code></h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> yfinance <span style="color:#f92672">as</span> yf
+<span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#f92672">as</span> plt
+<span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+
+stock_id <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;2615.TW&#39;</span>
+start_date <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;2021-03&#39;</span>
+end_date <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;2021-07&#39;</span>
+
+s <span style="color:#f92672">=</span> yf<span style="color:#f92672">.</span>Ticker(stock_id)<span style="color:#f92672">.</span>history(<span style="color:#e6db74">&#39;max&#39;</span>)[start_date:end_date]
+x <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span>index<span style="color:#f92672">.</span>strftime(<span style="color:#e6db74">&#39;%Y/%m/</span><span style="color:#e6db74">%d</span><span style="color:#e6db74">&#39;</span>)
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">ma</span>(n):
+    <span style="color:#66d9ef">return</span> s<span style="color:#f92672">.</span>Close<span style="color:#f92672">.</span>rolling(n,min_periods<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)<span style="color:#f92672">.</span>mean()
+
+fig,ax <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>subplots(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>,figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">23</span>,<span style="color:#ae81ff">8</span>))
+ub <span style="color:#f92672">=</span> s[[<span style="color:#e6db74">&#39;Open&#39;</span>,<span style="color:#e6db74">&#39;Close&#39;</span>]]<span style="color:#f92672">.</span>max(axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+lb <span style="color:#f92672">=</span> s[[<span style="color:#e6db74">&#39;Open&#39;</span>,<span style="color:#e6db74">&#39;Close&#39;</span>]]<span style="color:#f92672">.</span>min(axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+
+ax<span style="color:#f92672">.</span>bar(x,ub<span style="color:#f92672">-</span>lb<span style="color:#f92672">*</span><span style="color:#ae81ff">0.995</span>,bottom<span style="color:#f92672">=</span>lb,width<span style="color:#f92672">=</span><span style="color:#ae81ff">0.5</span>,color<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;tab:red&#39;</span><span style="color:#66d9ef">if</span> x<span style="color:#f92672">&gt;=</span><span style="color:#ae81ff">0</span> <span style="color:#66d9ef">else</span><span style="color:#e6db74">&#39;tab:green&#39;</span><span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> s<span style="color:#f92672">.</span>Close<span style="color:#f92672">-</span>s<span style="color:#f92672">.</span>Open])
+ax<span style="color:#f92672">.</span>vlines(x,s<span style="color:#f92672">.</span>Low,s<span style="color:#f92672">.</span>High,color<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;tab:red&#39;</span><span style="color:#66d9ef">if</span> x<span style="color:#f92672">&gt;=</span><span style="color:#ae81ff">0</span> <span style="color:#66d9ef">else</span><span style="color:#e6db74">&#39;tab:green&#39;</span><span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> s<span style="color:#f92672">.</span>Close<span style="color:#f92672">-</span>s<span style="color:#f92672">.</span>Open])
+<span style="color:#66d9ef">for</span> n,color <span style="color:#f92672">in</span> zip([<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">20</span>,<span style="color:#ae81ff">60</span>,<span style="color:#ae81ff">120</span>],[<span style="color:#e6db74">&#39;orange&#39;</span>,<span style="color:#e6db74">&#39;tab:blue&#39;</span>,<span style="color:#e6db74">&#39;purple&#39;</span>,<span style="color:#e6db74">&#39;green&#39;</span>]):
+    ax<span style="color:#f92672">.</span>plot(x,ma(n),color<span style="color:#f92672">=</span>color,alpha<span style="color:#f92672">=.</span><span style="color:#ae81ff">6</span>,label<span style="color:#f92672">=</span>f<span style="color:#e6db74">&#34;ma{n}&#34;</span>)
+
+ax2 <span style="color:#f92672">=</span> ax<span style="color:#f92672">.</span>twinx()
+ax2<span style="color:#f92672">.</span>bar(x,s<span style="color:#f92672">.</span>Volume<span style="color:#f92672">/</span><span style="color:#ae81ff">1000</span>,width<span style="color:#f92672">=</span><span style="color:#ae81ff">0.5</span>,color<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;tab:red&#39;</span><span style="color:#66d9ef">if</span> x<span style="color:#f92672">&gt;=</span><span style="color:#ae81ff">0</span> <span style="color:#66d9ef">else</span><span style="color:#e6db74">&#39;tab:green&#39;</span><span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> s<span style="color:#f92672">.</span>Close<span style="color:#f92672">-</span>s<span style="color:#f92672">.</span>Open],alpha<span style="color:#f92672">=.</span><span style="color:#ae81ff">3</span>,linewidth<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>)
+
+ax<span style="color:#f92672">.</span>set_title(f<span style="color:#e6db74">&#34;{stock_id} K線圖&#34;</span>,fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">15</span>)
+ax<span style="color:#f92672">.</span>set_xlabel(<span style="color:#e6db74">&#39;Date&#39;</span>)
+ax<span style="color:#f92672">.</span>set_ylabel(<span style="color:#e6db74">&#39;Price&#39;</span>,fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">15</span>,color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;tab:blue&#39;</span>)
+ax2<span style="color:#f92672">.</span>set_ylabel(<span style="color:#e6db74">&#39;Volume&#39;</span>,fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">15</span>,color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;tab:red&#39;</span>)
+ax<span style="color:#f92672">.</span>legend(loc<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;upper left&#39;</span>,fontsize<span style="color:#f92672">=</span><span style="color:#ae81ff">13</span>)
+ax<span style="color:#f92672">.</span>tick_params(<span style="color:#e6db74">&#39;y&#39;</span>,labelcolor<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;tab:blue&#39;</span>)
+ax2<span style="color:#f92672">.</span>tick_params(<span style="color:#e6db74">&#39;y&#39;</span>,labelcolor<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;tab:red&#39;</span>)
+ax<span style="color:#f92672">.</span>set_xticks(np<span style="color:#f92672">.</span>arange(<span style="color:#ae81ff">0</span>,len(x),len(x)<span style="color:#f92672">/</span><span style="color:#ae81ff">15</span>))
+ax<span style="color:#f92672">.</span>set_yticks(np<span style="color:#f92672">.</span>arange(s<span style="color:#f92672">.</span>Close<span style="color:#f92672">.</span>min()<span style="color:#f92672">*</span><span style="color:#ae81ff">0.8</span>,s<span style="color:#f92672">.</span>Close<span style="color:#f92672">.</span>max()<span style="color:#f92672">*</span><span style="color:#ae81ff">1.05</span>,s<span style="color:#f92672">.</span>Close<span style="color:#f92672">.</span>max()<span style="color:#f92672">/</span><span style="color:#ae81ff">10</span>))
+ax2<span style="color:#f92672">.</span>set_yticks(np<span style="color:#f92672">.</span>arange(<span style="color:#ae81ff">0</span>,s<span style="color:#f92672">.</span>Volume<span style="color:#f92672">.</span>max()<span style="color:#f92672">/</span><span style="color:#ae81ff">1000</span><span style="color:#f92672">*</span><span style="color:#ae81ff">1.8</span>,s<span style="color:#f92672">.</span>Volume<span style="color:#f92672">.</span>max()<span style="color:#f92672">/</span><span style="color:#ae81ff">1000</span><span style="color:#f92672">/</span><span style="color:#ae81ff">20</span>))
+ax<span style="color:#f92672">.</span>grid(<span style="color:#e6db74">&#39;-.&#39;</span>,alpha<span style="color:#f92672">=.</span><span style="color:#ae81ff">5</span>)
+
+fig<span style="color:#f92672">.</span>show()
+</code></pre></div><p><img src="/images/courses/plot_candles.png" alt=""></p>
+<p>.</p>
+<h3 id="seabornhttpsseabornpydataorg"><a href="https://seaborn.pydata.org/"><strong>seaborn</strong></a></h3>
+<h4 id="大盤單月漲跌"><code>大盤單月漲跌</code></h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> yfinance <span style="color:#f92672">as</span> yf
+<span style="color:#f92672">import</span> seaborn <span style="color:#f92672">as</span> sns
+
+stock_id <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;^TWII&#39;</span>
+s <span style="color:#f92672">=</span> yf<span style="color:#f92672">.</span>Ticker(stock_id)<span style="color:#f92672">.</span>history(<span style="color:#e6db74">&#39;max&#39;</span>)<span style="color:#75715e">#[start_date:end_date]</span>
+
+<span style="color:#75715e"># 取出每月收盤價</span>
+df <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span>Close<span style="color:#f92672">.</span>groupby([s<span style="color:#f92672">.</span>index<span style="color:#f92672">.</span>year,s<span style="color:#f92672">.</span>index<span style="color:#f92672">.</span>month])<span style="color:#f92672">.</span>last()
+df <span style="color:#f92672">=</span> (df<span style="color:#f92672">/</span>df<span style="color:#f92672">.</span>shift()<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)<span style="color:#f92672">*</span><span style="color:#ae81ff">100</span>
+<span style="color:#75715e"># 修改index_names</span>
+df<span style="color:#f92672">.</span>index<span style="color:#f92672">.</span>names <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;year&#39;</span>,<span style="color:#e6db74">&#39;month&#39;</span>]
+<span style="color:#75715e"># 將df展開</span>
+df <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>unstack()
+
+fig, ax <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>subplots(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">15</span>,<span style="color:#ae81ff">10</span>))
+<span style="color:#75715e"># cmap表示顏色 ,center表示中位數 ,annot表示是否要顯示數值 ,fmt表示數值顯示到小數第幾位</span>
+sns<span style="color:#f92672">.</span>heatmap(df,cmap<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;coolwarm&#39;</span>,center<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>,annot<span style="color:#f92672">=</span>True,fmt<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;.2f&#39;</span>,ax<span style="color:#f92672">=</span>ax)
+fig<span style="color:#f92672">.</span>show()
+</code></pre></div><p><img src="/images/courses/heatmap.png" alt=""></p>
+<p>.</p>
+<h3 id="plotlyhttpsplotlycompython"><a href="https://plotly.com/python/"><strong>plotly</strong></a></h3>
+<h4 id="臺股板塊圖"><code>臺股板塊圖</code></h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> pandas <span style="color:#f92672">as</span> pd
+<span style="color:#f92672">import</span> plotly.express <span style="color:#f92672">as</span> px
+<span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+
+industry <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_pickle(<span style="color:#e6db74">&#39;https://github.com/FinBrain-tw/twstock_database/raw/main/history/industry.pkl&#39;</span>)
+close <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_pickle(<span style="color:#e6db74">&#39;https://github.com/FinBrain-tw/twstock_database/raw/main/history/close.pkl&#39;</span>)
+volume <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_pickle(<span style="color:#e6db74">&#39;https://github.com/FinBrain-tw/twstock_database/raw/main/history/volume.pkl&#39;</span>)
+
+industry[<span style="color:#e6db74">&#39;twstock&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;twstock&#39;</span>
+industry[<span style="color:#e6db74">&#39;close&#39;</span>] <span style="color:#f92672">=</span> close[industry<span style="color:#f92672">.</span>index]<span style="color:#f92672">.</span>iloc[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+industry[<span style="color:#e6db74">&#39;volume&#39;</span>] <span style="color:#f92672">=</span> volume[industry<span style="color:#f92672">.</span>index]<span style="color:#f92672">.</span>iloc[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+industry[<span style="color:#e6db74">&#39;pct&#39;</span>] <span style="color:#f92672">=</span> round((close<span style="color:#f92672">/</span>close<span style="color:#f92672">.</span>shift()<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)[industry<span style="color:#f92672">.</span>index]<span style="color:#f92672">.</span>iloc[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]<span style="color:#f92672">*</span><span style="color:#ae81ff">100</span>,<span style="color:#ae81ff">2</span>)
+industry[<span style="color:#e6db74">&#39;label&#39;</span>] <span style="color:#f92672">=</span> industry<span style="color:#f92672">.</span>index<span style="color:#f92672">+</span><span style="color:#e6db74">&#39; &#39;</span><span style="color:#f92672">+</span>industry[<span style="color:#e6db74">&#39;公司簡稱&#39;</span>]
+industry <span style="color:#f92672">=</span> industry<span style="color:#f92672">.</span>dropna()
+
+<span style="color:#75715e"># path代表板塊路徑 ,values決定板塊大小 ,color決定顏色深淺</span>
+fig <span style="color:#f92672">=</span> px<span style="color:#f92672">.</span>treemap(industry,path<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;twstock&#39;</span>,<span style="color:#e6db74">&#39;產業類別&#39;</span>,<span style="color:#e6db74">&#39;族群類股&#39;</span>,<span style="color:#e6db74">&#39;label&#39;</span>],values<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;volume&#39;</span>,color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;pct&#39;</span>,color_continuous_scale<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;balance&#39;</span>,
+                color_continuous_midpoint<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>average(industry[<span style="color:#e6db74">&#39;pct&#39;</span>],weights<span style="color:#f92672">=</span>industry[<span style="color:#e6db74">&#39;volume&#39;</span>]),custom_data<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;pct&#39;</span>,<span style="color:#e6db74">&#39;close&#39;</span>],height<span style="color:#f92672">=</span><span style="color:#ae81ff">600</span>,title<span style="color:#f92672">=</span>f<span style="color:#e6db74">&#34;{close.index[-1].strftime(&#39;%Y-%m-</span><span style="color:#e6db74">%d</span><span style="color:#e6db74">&#39;)} 台股板塊圖&#34;</span>)
+
+fig<span style="color:#f92672">.</span>update_traces(textposition<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;middle center&#39;</span>,texttemplate<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;%{label}&lt;br&gt;%{customdata[0]}&lt;br&gt;%{customdata[1]}&#39;</span>)
+fig<span style="color:#f92672">.</span>show()
+</code></pre></div><p><img src="/images/courses/treemap.png" alt=""></p>
+<p>.</p>
+<h3 id="pyechartshttpsgallerypyechartsorgreadme"><a href="https://gallery.pyecharts.org/#/README"><strong>pyecharts</strong></a></h3>
+<h4 id="k線圖-1"><code>K線圖</code></h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">from</span> pyecharts.charts <span style="color:#f92672">import</span> Bar,Line,Kline,Grid
+<span style="color:#f92672">import</span> pyecharts.options <span style="color:#f92672">as</span> opts
+<span style="color:#f92672">from</span> pyecharts.commons.utils <span style="color:#f92672">import</span> JsCode
+<span style="color:#f92672">from</span> pyecharts.globals <span style="color:#f92672">import</span> CurrentConfig,NotebookType
+<span style="color:#f92672">import</span> yfinance <span style="color:#f92672">as</span> yf
+<span style="color:#f92672">import</span> talib
+
+<span style="color:#75715e"># 在jupyter lab顯示圖片</span>
+CurrentConfig<span style="color:#f92672">.</span>NOTEBOOK_TYPE <span style="color:#f92672">=</span> NotebookType<span style="color:#f92672">.</span>JUPYTER_LAB
+Line()<span style="color:#f92672">.</span>load_javascript()
+
+stock_id <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;BTC-USD&#39;</span>
+dfstock <span style="color:#f92672">=</span> yf<span style="color:#f92672">.</span>Ticker(stock_id)<span style="color:#f92672">.</span>history(<span style="color:#e6db74">&#39;max&#39;</span>)
+
+<span style="color:#75715e"># pyecharts要求col_name須為小寫</span>
+dfstock <span style="color:#f92672">=</span> dfstock<span style="color:#f92672">.</span>rename(columns<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#39;Open&#39;</span>:<span style="color:#e6db74">&#39;open&#39;</span>,<span style="color:#e6db74">&#39;Close&#39;</span>:<span style="color:#e6db74">&#39;close&#39;</span>,<span style="color:#e6db74">&#39;Low&#39;</span>:<span style="color:#e6db74">&#39;low&#39;</span>,<span style="color:#e6db74">&#39;High&#39;</span>:<span style="color:#e6db74">&#39;high&#39;</span>,<span style="color:#e6db74">&#39;Volume&#39;</span>:<span style="color:#e6db74">&#39;volume&#39;</span>})[[<span style="color:#e6db74">&#39;open&#39;</span>,<span style="color:#e6db74">&#39;close&#39;</span>,<span style="color:#e6db74">&#39;low&#39;</span>,<span style="color:#e6db74">&#39;high&#39;</span>,<span style="color:#e6db74">&#39;volume&#39;</span>]]
+dfstock[<span style="color:#e6db74">&#39;pct&#39;</span>] <span style="color:#f92672">=</span> round((dfstock<span style="color:#f92672">.</span>close<span style="color:#f92672">/</span>dfstock<span style="color:#f92672">.</span>close<span style="color:#f92672">.</span>shift()<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)<span style="color:#f92672">*</span><span style="color:#ae81ff">100</span>,<span style="color:#ae81ff">2</span>)
+s <span style="color:#f92672">=</span> dfstock<span style="color:#f92672">.</span>copy()
+
+<span style="color:#75715e"># 讓pyecharts判斷成交量要呈現什麼顏色</span>
+s[<span style="color:#e6db74">&#39;value&#39;</span>] <span style="color:#f92672">=</span> (s<span style="color:#f92672">.</span>close<span style="color:#f92672">&gt;</span>s<span style="color:#f92672">.</span>open)<span style="color:#f92672">.</span>astype(int)
+vol <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span>reset_index()<span style="color:#f92672">.</span>reset_index()[[<span style="color:#e6db74">&#39;index&#39;</span>,<span style="color:#e6db74">&#39;volume&#39;</span>,<span style="color:#e6db74">&#39;value&#39;</span>]]
+
+<span style="color:#75715e"># pyecharts的index須為str的list</span>
+x <span style="color:#f92672">=</span> list(s<span style="color:#f92672">.</span>index<span style="color:#f92672">.</span>astype(str))
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">ma</span>(n):
+        <span style="color:#66d9ef">return</span> round(s<span style="color:#f92672">.</span>close<span style="color:#f92672">.</span>rolling(n,min_periods<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)<span style="color:#f92672">.</span>mean(),<span style="color:#ae81ff">2</span>)
+
+kline <span style="color:#f92672">=</span> (
+    Kline()
+    <span style="color:#f92672">.</span>add_xaxis(x)
+    <span style="color:#f92672">.</span>add_yaxis(<span style="color:#e6db74">&#39;kline&#39;</span>,s<span style="color:#f92672">.</span>values<span style="color:#f92672">.</span>tolist(),itemstyle_opts<span style="color:#f92672">=</span>opts<span style="color:#f92672">.</span>ItemStyleOpts(color<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#f11421&#34;</span>,color0<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#34b298&#34;</span>,border_color<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#f11421&#34;</span>,border_color0<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;#34b298&#39;</span>))
+    <span style="color:#75715e"># 建立多個y軸</span>
+    <span style="color:#f92672">.</span>extend_axis(yaxis<span style="color:#f92672">=</span>opts<span style="color:#f92672">.</span>AxisOpts(<span style="color:#e6db74">&#39;value&#39;</span>,<span style="color:#e6db74">&#39;volume&#39;</span>,max_<span style="color:#f92672">=</span>round(dfstock<span style="color:#f92672">.</span>volume<span style="color:#f92672">.</span>max()<span style="color:#f92672">*</span><span style="color:#ae81ff">3</span>)))
+    <span style="color:#f92672">.</span>extend_axis(yaxis<span style="color:#f92672">=</span>opts<span style="color:#f92672">.</span>AxisOpts(<span style="color:#e6db74">&#39;value&#39;</span>,<span style="color:#e6db74">&#39;pct&#39;</span>,min_<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>,max_<span style="color:#f92672">=</span><span style="color:#ae81ff">5000</span>,offset<span style="color:#f92672">=</span><span style="color:#ae81ff">500</span>))
+    <span style="color:#75715e"># tooltips為滑鼠移過去顯示數據</span>
+    <span style="color:#75715e"># datazoom為可自由縮放時間軸</span>
+    <span style="color:#75715e"># visualmap為判斷成交量顏色</span>
+    <span style="color:#75715e"># axispointer為多圖同時顯示十字軸</span>
+    <span style="color:#f92672">.</span>set_global_opts(tooltip_opts<span style="color:#f92672">=</span>opts<span style="color:#f92672">.</span>TooltipOpts(trigger<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;axis&#39;</span>,axis_pointer_type<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;cross&#39;</span>,background_color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;rgba(0,0,0,0.4)&#39;</span>),
+                     datazoom_opts<span style="color:#f92672">=</span>[opts<span style="color:#f92672">.</span>DataZoomOpts(type_<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;inside&#39;</span>,range_start<span style="color:#f92672">=</span><span style="color:#ae81ff">95</span>,range_end<span style="color:#f92672">=</span><span style="color:#ae81ff">100</span>,xaxis_index<span style="color:#f92672">=</span>[<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>]),opts<span style="color:#f92672">.</span>DataZoomOpts(range_start<span style="color:#f92672">=</span><span style="color:#ae81ff">95</span>,range_end<span style="color:#f92672">=</span><span style="color:#ae81ff">100</span>,xaxis_index<span style="color:#f92672">=</span>[<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>])],
+                     visualmap_opts<span style="color:#f92672">=</span>opts<span style="color:#f92672">.</span>VisualMapOpts(series_index<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>,dimension<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>,is_piecewise<span style="color:#f92672">=</span>True,pieces<span style="color:#f92672">=</span>[{<span style="color:#e6db74">&#39;value&#39;</span>:<span style="color:#ae81ff">0</span>,<span style="color:#e6db74">&#39;color&#39;</span>:<span style="color:#e6db74">&#39;#34b298&#39;</span>},{<span style="color:#e6db74">&#39;value&#39;</span>:<span style="color:#ae81ff">1</span>,<span style="color:#e6db74">&#39;color&#39;</span>:<span style="color:#e6db74">&#39;#f11421&#39;</span>}]),
+                     yaxis_opts<span style="color:#f92672">=</span>opts<span style="color:#f92672">.</span>AxisOpts(is_scale<span style="color:#f92672">=</span>True,splitarea_opts<span style="color:#f92672">=</span>opts<span style="color:#f92672">.</span>SplitAreaOpts(areastyle_opts<span style="color:#f92672">=</span>opts<span style="color:#f92672">.</span>AreaStyleOpts(<span style="color:#ae81ff">0.6</span>))),
+                     axispointer_opts<span style="color:#f92672">=</span>opts<span style="color:#f92672">.</span>AxisPointerOpts(is_show<span style="color:#f92672">=</span>True,link<span style="color:#f92672">=</span>[{<span style="color:#e6db74">&#34;xAxisIndex&#34;</span>: <span style="color:#e6db74">&#34;all&#34;</span>}],label<span style="color:#f92672">=</span>opts<span style="color:#f92672">.</span>LabelOpts(background_color<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#777&#34;</span>)),
+                     title_opts<span style="color:#f92672">=</span>opts<span style="color:#f92672">.</span>TitleOpts(stock_id)))
+
+bar <span style="color:#f92672">=</span> Bar()<span style="color:#f92672">.</span>add_yaxis(<span style="color:#e6db74">&#39;volume&#39;</span>,vol<span style="color:#f92672">.</span>values<span style="color:#f92672">.</span>tolist(),yaxis_index<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>,label_opts<span style="color:#f92672">=</span>opts<span style="color:#f92672">.</span>LabelOpts(False))
+line <span style="color:#f92672">=</span> Line()<span style="color:#f92672">.</span>add_xaxis(x)<span style="color:#f92672">.</span>add_yaxis(<span style="color:#e6db74">&#39;pct&#39;</span>,s<span style="color:#f92672">.</span>pct<span style="color:#f92672">.</span>tolist(),yaxis_index<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>,label_opts<span style="color:#f92672">=</span>opts<span style="color:#f92672">.</span>LabelOpts(False),is_symbol_show<span style="color:#f92672">=</span>False)
+main_line <span style="color:#f92672">=</span> Line()<span style="color:#f92672">.</span>add_xaxis(x)
+
+<span style="color:#66d9ef">for</span> n,color <span style="color:#f92672">in</span> zip([<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">20</span>,<span style="color:#ae81ff">60</span>],[<span style="color:#e6db74">&#39;#f6be10&#39;</span>,<span style="color:#e6db74">&#39;#c82bff&#39;</span>,<span style="color:#e6db74">&#39;#1088f6&#39;</span>]):
+    main_line<span style="color:#f92672">.</span>add_yaxis(<span style="color:#e6db74">&#39;ma&#39;</span><span style="color:#f92672">+</span>str(n),ma(n),label_opts<span style="color:#f92672">=</span>opts<span style="color:#f92672">.</span>LabelOpts(False),is_symbol_show<span style="color:#f92672">=</span>False,itemstyle_opts<span style="color:#f92672">=</span>opts<span style="color:#f92672">.</span>ItemStyleOpts(color<span style="color:#f92672">=</span>color))
+        
+<span style="color:#66d9ef">for</span> f <span style="color:#f92672">in</span> [bar,line,main_line]:
+    kline<span style="color:#f92672">.</span>overlap(f)
+
+idx1 <span style="color:#f92672">=</span> round(talib<span style="color:#f92672">.</span>RSI(s<span style="color:#f92672">.</span>close<span style="color:#f92672">.</span>ffill(),<span style="color:#ae81ff">5</span>),<span style="color:#ae81ff">2</span>)
+idx1_name <span style="color:#f92672">=</span><span style="color:#e6db74">&#39;RSI&#39;</span>
+
+idx1_line <span style="color:#f92672">=</span> (
+    Line()
+    <span style="color:#f92672">.</span>add_xaxis(x)
+    <span style="color:#f92672">.</span>add_yaxis(idx1_name,idx1<span style="color:#f92672">.</span>tolist(),xaxis_index<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>,yaxis_index<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>,label_opts<span style="color:#f92672">=</span>opts<span style="color:#f92672">.</span>LabelOpts(False),is_symbol_show<span style="color:#f92672">=</span>False,itemstyle_opts<span style="color:#f92672">=</span>opts<span style="color:#f92672">.</span>ItemStyleOpts(color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;#ff8100&#39;</span>))
+    <span style="color:#f92672">.</span>set_global_opts(legend_opts<span style="color:#f92672">=</span>opts<span style="color:#f92672">.</span>LegendOpts(pos_top<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;480px&#39;</span>),yaxis_opts<span style="color:#f92672">=</span>opts<span style="color:#f92672">.</span>AxisOpts(splitarea_opts<span style="color:#f92672">=</span>opts<span style="color:#f92672">.</span>SplitAreaOpts(areastyle_opts<span style="color:#f92672">=</span>opts<span style="color:#f92672">.</span>AreaStyleOpts(<span style="color:#ae81ff">0.6</span>))))
+)
+
+idx2 <span style="color:#f92672">=</span> round(talib<span style="color:#f92672">.</span>MACD(s<span style="color:#f92672">.</span>close<span style="color:#f92672">.</span>ffill())[<span style="color:#ae81ff">2</span>]<span style="color:#f92672">*</span><span style="color:#ae81ff">100</span>,<span style="color:#ae81ff">2</span>)
+idx2_name <span style="color:#f92672">=</span><span style="color:#e6db74">&#39;MACD&#39;</span>
+
+idx2_bar <span style="color:#f92672">=</span> (
+    Bar()
+    <span style="color:#f92672">.</span>add_xaxis(x)
+    <span style="color:#f92672">.</span>add_yaxis(idx2_name,idx2<span style="color:#f92672">.</span>tolist(),xaxis_index<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>,yaxis_index<span style="color:#f92672">=</span><span style="color:#ae81ff">4</span>,label_opts<span style="color:#f92672">=</span>opts<span style="color:#f92672">.</span>LabelOpts(False),itemstyle_opts<span style="color:#f92672">=</span>opts<span style="color:#f92672">.</span>ItemStyleOpts(
+        color<span style="color:#f92672">=</span>JsCode(<span style="color:#e6db74">&#34;&#34;&#34;function(params) {var colorList;if (params.data &gt;= 0) {colorList=&#39;#f11421&#39;} else {colorList=&#39;#34b298&#39;} return colorList}&#34;&#34;&#34;</span>)))
+    <span style="color:#f92672">.</span>set_global_opts(legend_opts<span style="color:#f92672">=</span>opts<span style="color:#f92672">.</span>LegendOpts(pos_top<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;610px&#39;</span>),yaxis_opts<span style="color:#f92672">=</span>opts<span style="color:#f92672">.</span>AxisOpts(splitarea_opts<span style="color:#f92672">=</span>opts<span style="color:#f92672">.</span>SplitAreaOpts(areastyle_opts<span style="color:#f92672">=</span>opts<span style="color:#f92672">.</span>AreaStyleOpts(<span style="color:#ae81ff">0.6</span>))))
+)
+
+grid <span style="color:#f92672">=</span> Grid(init_opts<span style="color:#f92672">=</span>opts<span style="color:#f92672">.</span>InitOpts(<span style="color:#e6db74">&#39;1200px&#39;</span>,<span style="color:#e6db74">&#39;760px&#39;</span>))
+<span style="color:#66d9ef">for</span> f,pos_top,height <span style="color:#f92672">in</span> zip([kline,idx1_line,idx2_bar],[<span style="color:#e6db74">&#39;50px&#39;</span>,<span style="color:#e6db74">&#39;500px&#39;</span>,<span style="color:#e6db74">&#39;620px&#39;</span>],[<span style="color:#e6db74">&#39;400px&#39;</span>,<span style="color:#e6db74">&#39;80px&#39;</span>,<span style="color:#e6db74">&#39;80px&#39;</span>]):
+    grid<span style="color:#f92672">.</span>add(f,grid_opts<span style="color:#f92672">=</span>opts<span style="color:#f92672">.</span>GridOpts(<span style="color:#e6db74">&#39;5%&#39;</span>,pos_top,<span style="color:#e6db74">&#39;5%&#39;</span>,height<span style="color:#f92672">=</span>height),is_control_axis_index<span style="color:#f92672">=</span>True)
+
+grid<span style="color:#f92672">.</span>render_notebook()
+</code></pre></div><p><img src="/images/courses/pyecharts.png" alt=""></p>
+<hr>
+<h5 id="視覺化一直以來是數據分析最重要的能力透過視覺化的方式能夠更有效率地對資料進行分析並運用統計學進行調整">視覺化一直以來是數據分析最重要的能力，透過視覺化的方式能夠更有效率地對資料進行分析，並運用統計學進行調整!</h5>
+
+      </div>
+      
+      <div class="col-12">
+        <h5 class="mb-3">teacher</h5>
+        
+        <div class="d-flex justify-content-between align-items-center flex-wrap">
+          <div class="media mb-2 mb-sm-0 align-items-center">
+            <img class="mr-4 img-fluid teacher-thumb-sm" src="/images/teachers/oscar.png" alt="Oscar Chen">
+            <div class="media-body">
+              <h4 class="mt-0"><a href="https://finbrain-tw.github.io/teacher/oscar-chen/">Oscar Chen</a></h4>
+              Python analyst
+            </div>
+          </div>
+          <div class="social-link">
+            <h6 class="d-none d-sm-block text-right">Contact Info</h6>
+            <ul class="list-inline">
+              
+              <li class="list-inline-item"><a class="d-inline-block text-light p-1" href="https://mail.google.com/"><i class="ti-email"></i></a></li>
+              
+              <li class="list-inline-item"><a class="d-inline-block text-light p-1" href="tel:&#43;0975-137-619"><i class="ti-mobile"></i></a></li>
+              
+              <li class="list-inline-item"><a class="d-inline-block text-light p-1" href="https://www.facebook.com/profile.php?id=100010326794525"><i class="ti-facebook"></i></a></li>
+              
+              <li class="list-inline-item"><a class="d-inline-block text-light p-1" href="https://www.instagram.com/oscarchen.3/"><i class="ti-instagram"></i></a></li>
+              
+              <li class="list-inline-item"><a class="d-inline-block text-light p-1" href="https://github.com/FinBrain-tw"><i class="ti-github"></i></a></li>
+              
+              <li class="list-inline-item"><a class="d-inline-block text-light p-1" href="https://finbrain-tw.github.io/"><i class="ti-world"></i></a></li>
+              
+            </ul>
+          </div>
+        </div>
+        
+        <div class="border-bottom border-primary mt-4"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section pt-0">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="section-title">Related Course</h2>
+      </div>
+    </div>
+    <div class="row">
+      
+      
+      
+      <div class="col-lg-4 col-sm-6 mb-5">
+        <div class="card p-0 border-primary rounded-0 hover-shadow">
+  <img class="card-img-top rounded-0" src="/images/courses/crawler.png" alt="Python網頁爬蟲教學">
+  <div class="card-body">
+    <ul class="list-inline mb-2">
+      <li class="list-inline-item"><i class="ti-calendar"></i> 06 Month</li>
+      <li class="list-inline-item"><i class="ti-bookmark-alt"></i> Python</li>
+    </ul>
+    <h4 class="card-title"><a href="https://finbrain-tw.github.io/course/crawler/">Python網頁爬蟲教學</a></h4>
+    <p class="card-text mb-4">了解動態靜態網頁&amp;解析爬蟲技巧</p>
+    <a href="https://finbrain-tw.github.io/course/crawler/" class="btn btn-primary btn-sm">Apply now</a>
+  </div>
+</div>
+      </div>
+      
+      <div class="col-lg-4 col-sm-6 mb-5">
+        <div class="card p-0 border-primary rounded-0 hover-shadow">
+  <img class="card-img-top rounded-0" src="/images/courses/env-packages.png" alt="如何架設Python環境">
+  <div class="card-body">
+    <ul class="list-inline mb-2">
+      <li class="list-inline-item"><i class="ti-calendar"></i> 06 Month</li>
+      <li class="list-inline-item"><i class="ti-bookmark-alt"></i> Python</li>
+    </ul>
+    <h4 class="card-title"><a href="https://finbrain-tw.github.io/course/env-packages/">如何架設Python環境</a></h4>
+    <p class="card-text mb-4">建立環境 &amp; 安裝套件</p>
+    <a href="https://finbrain-tw.github.io/course/env-packages/" class="btn btn-primary btn-sm">Apply now</a>
+  </div>
+</div>
+      </div>
+      
+      <div class="col-lg-4 col-sm-6 mb-5">
+        <div class="card p-0 border-primary rounded-0 hover-shadow">
+  <img class="card-img-top rounded-0" src="/images/courses/course-1.jpg" alt="Photography">
+  <div class="card-body">
+    <ul class="list-inline mb-2">
+      <li class="list-inline-item"><i class="ti-calendar"></i> 06 Month</li>
+      <li class="list-inline-item"><i class="ti-bookmark-alt"></i> Photography</li>
+    </ul>
+    <h4 class="card-title"><a href="https://finbrain-tw.github.io/course/course-1/">Photography</a></h4>
+    <p class="card-text mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut …</p>
+    <a href="https://finbrain-tw.github.io/course/course-1/" class="btn btn-primary btn-sm">Apply now</a>
+  </div>
+</div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+
+<footer>
+  
+  
+  
+  <div class="newsletter">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9 ml-auto bg-primary py-5 newsletter-block">
+          <h3 class="text-white mb-4">Subscribe Newsletter</h3>
+          <form action="https://gmail.us4.list-manage.com/subscribe/post?u=463ee871f45d2d93748e77cad&amp;amp;id=a0a2c6d074" method="post" name="mc-embedded-subscribe-form" target="_blank">
+            <div class="input-wrapper">
+              <input type="email" class="form-control border-0" id="newsletter" name="newsletter" placeholder="Enter your email…">
+              <button type="submit" name="subscribe" class="btn btn-primary">Join</button>
+              <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                <input type="text" name="b_463ee871f45d2d93748e77cad_a0a2c6d074" tabindex="-1">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <div class="footer bg-footer section border-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-sm-8 mb-5 mb-lg-0">
+          
+          <a class="logo-footer" href="/"><img class="img-fluid mb-4" src="https://finbrain-tw.github.io/images/logo.png" alt="FinBrain-tw | 金頭腦交易室"></a>
+          <ul class="list-unstyled">
+            <li class="mb-4">Taiwan</li>
+            <li class="mb-4"><a href="mailto:finbrain.tw@gmail.com">finbrain.tw@gmail.com</a></li>
+            <li class="mb-4">0975137619</li>
+          </ul>
+        </div>
+        
+        <div class="col-lg-2 col-sm-4 col-6 mb-5 mb-md-0">
+          <h4 class="text-white mb-5 text-uppercase">company</h4>
+          <ul class="list-unstyled">
+            
+            
+            <li class="mb-3"><a class="text-color" href="https://finbrain-tw.github.io/about">關於FinBrain</a></li>
+            
+            
+            
+            <li class="mb-3"><a class="text-color" href="https://finbrain-tw.github.io/course">Python課程</a></li>
+            
+            
+            
+            
+            
+            <li class="mb-3"><a class="text-color" href="https://finbrain-tw.github.io/blog">投資策略</a></li>
+            
+            
+            
+            <li class="mb-3"><a class="text-color" href="https://finbrain-tw.github.io/contact">聯繫我們</a></li>
+            
+            
+          </ul>
+        </div>
+        
+        <div class="col-lg-2 col-sm-4 col-6 mb-5 mb-md-0">
+          <h4 class="text-white mb-5 text-uppercase">links</h4>
+          <ul class="list-unstyled">
+            
+            <li class="mb-3"><a class="text-color" href="https://finbrain-tw.github.io/event">event</a></li>
+            
+            <li class="mb-3"><a class="text-color" href="https://finbrain-tw.github.io/notice">notice</a></li>
+            
+            <li class="mb-3"><a class="text-color" href="https://finbrain-tw.github.io/research">research</a></li>
+            
+            <li class="mb-3"><a class="text-color" href="https://finbrain-tw.github.io/scholarship">scholarship</a></li>
+            
+            <li class="mb-3"><a class="text-color" href="https://finbrain-tw.github.io/teacher">teacher</a></li>
+            
+          </ul>
+        </div>
+        
+        <div class="col-lg-2 col-sm-4 col-6 mb-5 mb-md-0">
+          <h4 class="text-white mb-5 text-uppercase">Courses</h4>
+          <ul class="list-unstyled">
+            
+            <li class="mb-3"><a class="text-color" href="https://finbrain-tw.github.io/course/visual/">Python數據視覺化</a></li>
+            
+            <li class="mb-3"><a class="text-color" href="https://finbrain-tw.github.io/course/database/">建立專屬資料庫</a></li>
+            
+            <li class="mb-3"><a class="text-color" href="https://finbrain-tw.github.io/course/crawler/">Python網頁爬蟲教學</a></li>
+            
+            <li class="mb-3"><a class="text-color" href="https://finbrain-tw.github.io/course/python-basic/">Python快速入門</a></li>
+            
+            <li class="mb-3"><a class="text-color" href="https://finbrain-tw.github.io/course/env-packages/">如何架設Python環境</a></li>
+            
+          </ul>
+        </div>
+        
+        <div class="col-lg-2 col-sm-4 col-6 mb-5 mb-md-0">
+          <h4 class="text-white mb-5 text-uppercase">new notice</h4>
+          <ul class="list-unstyled">
+            
+            <li class="mb-3"><a class="text-color" href="https://finbrain-tw.github.io/notice/notice-1/">Teaching Materials and Testing Methods</a></li>
+            
+            <li class="mb-3"><a class="text-color" href="https://finbrain-tw.github.io/notice/notice-2/">Teaching Materials and Testing Methods</a></li>
+            
+            <li class="mb-3"><a class="text-color" href="https://finbrain-tw.github.io/notice/notice-3/">Teaching Materials and Testing Methods</a></li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="copyright py-4 bg-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7 text-md-left text-center">
+          <p class="mb-3 mb-md-0">COPYRIGHT © 2021 FinBrain-tw. ALL RIGHTS RESERVED.</p>
+        </div>
+        <div class="col-md-5 text-md-right text-center">
+          <ul class="list-inline">
+            
+            <li class="list-inline-item"><a class="d-inline-block p-2" href="https://www.facebook.com/FinBrain.tw/"><i class="ti-facebook text-primary"></i></a></li>
+            
+            <li class="list-inline-item"><a class="d-inline-block p-2" href="https://www.instagram.com/FinBrain.tw/"><i class="ti-instagram text-primary"></i></a></li>
+            
+            <li class="list-inline-item"><a class="d-inline-block p-2" href="https://github.com/FinBrain-tw"><i class="ti-github text-primary"></i></a></li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- Google Map API -->
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU&amp;libraries=places"></script>
+
+
+<!-- JS Plugins -->
+
+<script src="https://finbrain-tw.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://finbrain-tw.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://finbrain-tw.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://finbrain-tw.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://finbrain-tw.github.io/plugins/filterizr/jquery.filterizr.min.js"></script>
+
+<script src="https://finbrain-tw.github.io/plugins/google-map/gmap.js"></script>
+
+
+<!-- Main Script -->
+
+<script src="https://finbrain-tw.github.io/js/script.min.js"></script>
+
+<!-- google analitycs -->
+
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+  ga('create', 'G-QYW8P5B450', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide">
+	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-outline-primary ml-2">I Accept</span>
+</div>
+<script>
+	(function ($) {
+		const cookieBox = document.getElementById('js-cookie-box');
+		const cookieButton = document.getElementById('js-cookie-button');
+		if (!Cookies.get('cookie-box')) {
+			cookieBox.classList.remove('cookie-box-hide');
+			cookieButton.onclick = function () {
+				Cookies.set('cookie-box', true, {
+					expires:  2 
+				});
+				cookieBox.classList.add('cookie-box-hide');
+			};
+		}
+	})(jQuery);
+</script>
+
+
+<style>
+.cookie-box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 9999;
+  padding: 1rem 2rem;
+  background: rgb(71, 71, 71);
+  transition: all .75s cubic-bezier(.19, 1, .22, 1);
+  color: #fdfdfd;
+}
+
+.cookie-box-hide {
+  display: none;
+}
+</style>
+</body>
+
+</html>
