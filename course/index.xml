@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>用Python打造專屬投資策略 on FinBrain-tw | 金頭腦交易室</title>
+    <title>用Python打造專屬投資策略 on FinBrain-tw | FinBrain交易室</title>
     <link>https://finbrain-tw.github.io/course/</link>
-    <description>Recent content in 用Python打造專屬投資策略 on FinBrain-tw | 金頭腦交易室</description>
+    <description>Recent content in 用Python打造專屬投資策略 on FinBrain-tw | FinBrain交易室</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>COPYRIGHT © 2021 FinBrain-tw. ALL RIGHTS RESERVED.</copyright>
-    <lastBuildDate>Mon, 05 Jul 2021 15:27:17 +0800</lastBuildDate><atom:link href="https://finbrain-tw.github.io/course/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 06 Jul 2021 15:27:17 +0800</lastBuildDate><atom:link href="https://finbrain-tw.github.io/course/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python人工智慧</title>
+      <link>https://finbrain-tw.github.io/course/ai/</link>
+      <pubDate>Tue, 06 Jul 2021 15:27:17 +0800</pubDate>
+      
+      <guid>https://finbrain-tw.github.io/course/ai/</guid>
+      <description>人工智慧 介紹 其實早在1950年代就已經有AI的概念，但為什麼直到2015年後開始爆炸性成長呢? 主要是因為Big Data的發展，隨著智慧型手機的誕生，電腦、手機、容量就必須越做越大，造成數據爆炸性地成長;再加上computational power(運算能力)等晶片、顯卡大幅提升造成ML、DL可以迅速發展。    應用 實例     憑感覺的問題-影像辨識 數字辨識   傳統方式難以最佳解 圍棋   資料量極大的問題 google翻譯    .</description>
+    </item>
+    
     <item>
       <title>Python數據視覺化</title>
       <link>https://finbrain-tw.github.io/course/visual/</link>
@@ -51,15 +60,6 @@
       
       <guid>https://finbrain-tw.github.io/course/env-packages/</guid>
       <description>安裝miniconda   選擇版本安裝   開啟anaconda prompt 輸入 conda install jupyterlab   點選settings ➜ Advanced Settings Editor ➜ 選擇Notebook ➜ 複製Defaults ➜ 將lineNumbers改成true   .</description>
-    </item>
-    
-    <item>
-      <title>Photography</title>
-      <link>https://finbrain-tw.github.io/course/course-1/</link>
-      <pubDate>Sat, 06 Jul 2019 15:27:17 +0600</pubDate>
-      
-      <guid>https://finbrain-tw.github.io/course/course-1/</guid>
-      <description>About Course Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
     </item>
     
   </channel>
