@@ -63,6 +63,15 @@
     </item>
     
     <item>
+      <title>如何使用GitHub架網站</title>
+      <link>https://finbrain-tw.github.io/course/web/</link>
+      <pubDate>Sat, 10 Jul 2021 15:27:17 +0800</pubDate>
+      
+      <guid>https://finbrain-tw.github.io/course/web/</guid>
+      <description>建立網頁   選擇網頁版面     exampleSite內新增themes資料夾，刪除資料夾名稱的-master放入themes資料夾     安裝Hugo.</description>
+    </item>
+    
+    <item>
       <title>PYPI套件上傳教學</title>
       <link>https://finbrain-tw.github.io/course/pypi/</link>
       <pubDate>Fri, 09 Jul 2021 15:27:17 +0800</pubDate>
