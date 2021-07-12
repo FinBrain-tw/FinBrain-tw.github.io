@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en-us"><head>
   <meta charset="utf-8">
-  <title>Python人工智慧</title>
+  <title>PYPI套件上傳教學</title>
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description"
-    content="認識機器學習&amp;神經網路">
+    content="認識專案架構&amp;PYPI上傳更新">
   
   <meta name="author" content="Themefisher">
   <meta name="generator" content="Hugo 0.83.1" />
@@ -145,9 +145,9 @@
         <ul class="list-inline custom-breadcrumb">
           <li class="list-inline-item h2"><a class="text-primary font-secondary" href="https://finbrain-tw.github.io">Home</a></li>
           <li class="list-inline-item h5"><i class="ti-angle-right text-white"></i></li>
-          <li class="list-inline-item text-white h3 font-secondary">Python人工智慧</li>
+          <li class="list-inline-item text-white h3 font-secondary">PYPI套件上傳教學</li>
         </ul>
-        <p class="text-lighten">認識機器學習&amp;神經網路</p>
+        <p class="text-lighten">認識專案架構&amp;PYPI上傳更新</p>
       </div>
     </div>
   </div>
@@ -160,14 +160,14 @@
     <div class="row">
       <div class="col-12 mb-4">
         
-        <img style="height: 500px;width: 100%;object-fit: cover;" src="/images/courses/AI.png"
+        <img style="height: 500px;width: 100%;object-fit: cover;" src="/images/courses/pypi.png"
           class="img-fluid w-100">
       </div>
     </div>
     
     <div class="row align-items-center mb-5">
       <div class="col-xl-3 order-1 col-sm-6 mb-4 mb-xl-0">
-        <h2>Python人工智慧</h2>
+        <h2>PYPI套件上傳教學</h2>
       </div>
       <div class="col-xl-6 order-sm-3 order-xl-2 col-12 order-2">
         <ul class="list-inline text-xl-center">
@@ -211,220 +211,137 @@
     
     <div class="row">
       <div class="col-12 mb-4 content">
-        <h3 id="人工智慧">人工智慧</h3>
-<p><img src="/images/courses/ml.png" alt=""></p>
-<h3 id="介紹"><code>介紹</code></h3>
-<h5 id="其實早在1950年代就已經有ai的概念但為什麼直到2015年後開始爆炸性成長呢-主要是因為big-data的發展隨著智慧型手機的誕生電腦手機容量就必須越做越大造成數據爆炸性地成長再加上computational-power運算能力等晶片顯卡大幅提升造成mldl可以迅速發展">其實早在1950年代就已經有AI的概念，但為什麼直到2015年後開始爆炸性成長呢? 主要是因為Big Data的發展，隨著智慧型手機的誕生，電腦、手機、容量就必須越做越大，造成數據爆炸性地成長;再加上computational power(運算能力)等晶片、顯卡大幅提升造成ML、DL可以迅速發展。</h5>
-<table>
+        <h3 id="專案架構">專案架構</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">Finbrain <span style="color:#f92672">------</span> FinBrain <span style="color:#f92672">-----------------</span> __init__<span style="color:#f92672">.</span><span style="color:#a6e22e">py</span> 
+            <span style="color:#f92672">|</span>                        <span style="color:#f92672">|</span>
+            <span style="color:#f92672">|--</span> requirements<span style="color:#f92672">.</span><span style="color:#a6e22e">txt</span>     <span style="color:#f92672">|----</span> crawler<span style="color:#f92672">.</span><span style="color:#a6e22e">py</span>
+            <span style="color:#f92672">|</span>                        <span style="color:#f92672">|</span>
+            <span style="color:#f92672">|--</span> setup<span style="color:#f92672">.</span><span style="color:#a6e22e">py</span>             <span style="color:#f92672">|----</span> data<span style="color:#f92672">.</span><span style="color:#a6e22e">py</span>
+            <span style="color:#f92672">|</span>                        
+            <span style="color:#f92672">|--</span> <span style="color:#f92672">.</span><span style="color:#a6e22e">gitignore</span>           
+            <span style="color:#f92672">|</span>
+            <span style="color:#f92672">|--</span> README<span style="color:#f92672">.</span><span style="color:#a6e22e">md</span>
+</code></pre></div><table>
 <thead>
 <tr>
-<th>應用</th>
-<th>實例</th>
+<th>關鍵架構</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>憑感覺的問題-影像辨識</td>
-<td>數字辨識</td>
+<td>repo名稱(<code>FinBrain</code>) = 套件名稱(<code>FinBrain</code>)</td>
 </tr>
 <tr>
-<td>傳統方式難以最佳解</td>
-<td>圍棋</td>
+<td>套件需有<code>__init__.py</code>才會被打包上傳</td>
 </tr>
 <tr>
-<td>資料量極大的問題</td>
-<td>google翻譯</td>
+<td><code>requirements.txt</code> 為專案所需下載的套件</td>
+</tr>
+<tr>
+<td><code>setup.py</code>的功能為上傳repo到PYPI</td>
+</tr>
+<tr>
+<td><code>.gitignore</code>為忽略不上傳到GitHub的檔案</td>
 </tr>
 </tbody>
 </table>
+<p>.</p>
+<h3 id="建立專案">建立專案</h3>
+<ul>
+<li>
+<h4 id="安裝github-desktophttpsdesktopgithubcom">安裝<a href="https://desktop.github.com/">GitHub Desktop</a></h4>
+</li>
+</ul>
+<p><img src="/images/courses/github_desktop.png" alt=""></p>
+<ul>
+<li>
+<h4 id="新增repo">新增repo</h4>
+</li>
+</ul>
+<h2 id="imagescoursesnew_repopng"><img src="/images/courses/new_repo.png" alt=""></h2>
+<h2 id="imagescoursesrepo_namepng"><img src="/images/courses/repo_name.png" alt=""></h2>
+<p><img src="/images/courses/setup-desktop.png" alt=""></p>
+<h6 id="clone完畢後的檔案位於cusersappledocumentsgithub"><em>clone完畢後的檔案位於<code>C:\Users\apple\Documents\GitHub</code></em></h6>
 <p>.</p>
 <ul>
 <li>
-<h3 id="機器學習-machine-learning">機器學習 (Machine Learning)</h3>
+<h4 id="新增setuppy">新增setup.py</h4>
 </li>
 </ul>
-<table>
-<thead>
-<tr>
-<th>定義</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>parse data, learn from data, make informed decisions, by using algorithms and statistical models to analyse and draw inferences from patterns in data.</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>訓練關鍵</th>
-<th>意涵</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Features</td>
-<td>決定讓model從哪種角度去分析學習 / 需要domain knowledge</td>
-</tr>
-<tr>
-<td>Label</td>
-<td>正確解答</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>分類</th>
-<th>Supervised (監督式學習)</th>
-<th>Unsupervised (非監督式學習)</th>
-<th>Reinforcements (Semi-Supervised) (強化學習)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>特色</td>
-<td>有features和label</td>
-<td>只有features沒有label</td>
-<td>Agent(AI)與environment互動</td>
-</tr>
-<tr>
-<td>原理</td>
-<td>寫題目後對答案來修正</td>
-<td>做相似度分析 (單純分類)</td>
-<td>獎懲機制來訓練AI</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>優點</th>
-<th>缺點</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>訓練的時間較短</td>
-<td>預測的時間較久</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>模型種類</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Support Vector Machine (SVM)</td>
-</tr>
-<tr>
-<td>Random Forest (RF)</td>
-</tr>
-<tr>
-<td>LightGBM (lgb)</td>
-</tr>
-<tr>
-<td>XGBoost (xgb)</td>
-</tr>
-</tbody>
-</table>
+<h6 id="setup範例檔httpsgithubcomnavdeep-gsetuppyblobmastersetuppy"><em><a href="https://github.com/navdeep-G/setup.py/blob/master/setup.py">setup範例檔</a></em></h6>
+<h6 id="url為repo的github網址">URL為repo的GitHub網址</h6>
+<h6 id="required為專案所需套件可直接讀取requirementstxt">REQUIRED為專案所需套件，可直接讀取<code>requirements.txt</code></h6>
+<p><img src="/images/courses/setup-py.png" alt=""></p>
+<ul>
+<li>
+<h4 id="新增gitignore">新增.gitignore</h4>
+</li>
+</ul>
+<h6 id="gitignore範例檔httpsgithubcomgithubgitignoreblobmasterpythongitignore"><em><a href="https://github.com/github/gitignore/blob/master/Python.gitignore">gitignore範例檔</a></em></h6>
 <p>.</p>
 <ul>
 <li>
-<h3 id="深度學習-deep-learning-neural-network">深度學習 (Deep Learning) (Neural Network)</h3>
+<h4 id="申請api-tokenhttpspypiorgmanageaccount">申請<a href="https://pypi.org/manage/account/">API Token</a></h4>
 </li>
 </ul>
-<table>
-<thead>
-<tr>
-<th>定義</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>artificial neural network, mimic human brain to learn</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>訓練關鍵</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>模仿人腦的神經元</td>
-</tr>
-<tr>
-<td>不需要人為設計Features</td>
-</tr>
-</tbody>
-</table>
-<p><img src="/images/courses/layers.png" alt=""></p>
-<table>
-<thead>
-<tr>
-<th>優點</th>
-<th>缺點</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>預測的時間較快</td>
-<td>訓練的時間較久</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>模型種類</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Keras model</td>
-</tr>
-<tr>
-<td>Convolutional Neural Network (CNN)</td>
-</tr>
-<tr>
-<td>Long short-term memory (LSTM)</td>
-</tr>
-</tbody>
-</table>
-<p>.</p>
-<h3 id="結論"><code>結論</code></h3>
-<table>
-<thead>
-<tr>
-<th>訓練風險</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>資料量不足</td>
-</tr>
-<tr>
-<td>過多無用資料</td>
-</tr>
-<tr>
-<td>過擬合 (overfitting)</td>
-</tr>
-<tr>
-<td>未擬合 (underfitting)</td>
-</tr>
-</tbody>
-</table>
+<p><img src="/images/courses/API_token.png" alt=""></p>
+<ul>
+<li>
+<h4 id="user建立pypirc">(user)建立<code>.pypirc</code></h4>
+</li>
+</ul>
+<p><img src="/images/courses/pypirc.png" alt=""></p>
+<h3 id="上傳pypihttpspackagingpythonorgguidesdistributing-packages-using-setuptools"><a href="https://packaging.python.org/guides/distributing-packages-using-setuptools/">上傳PYPI</a></h3>
+<ul>
+<li>
+<h4 id="cmd專案資料夾">cmd專案資料夾</h4>
+</li>
+</ul>
+<p><img src="/images/courses/pypi-cmd.png" alt=""></p>
+<ul>
+<li>
+<h4 id="安裝上傳套件">安裝上傳套件</h4>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">pip install twine
+pip install wheel
+</code></pre></div><ul>
+<li>
+<h4 id="開始上傳">開始上傳</h4>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">python setup<span style="color:#f92672">.</span>py sdist
+python setup<span style="color:#f92672">.</span>py bdist_wheel
+twine upload dist<span style="color:#f92672">/*</span>
+</code></pre></div><h5 id="上傳成功"><em>上傳成功!</em></h5>
+<p><img src="/images/courses/upload.png" alt=""></p>
+<h3 id="更新版本">更新版本</h3>
+<ul>
+<li>
+<h4 id="setuppy修改版本">setup.py修改版本</h4>
+</li>
+</ul>
+<p><img src="/images/courses/version.png" alt=""></p>
+<ul>
+<li>
+<h4 id="開始上傳-1">開始上傳</h4>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">python setup<span style="color:#f92672">.</span>py sdist
+python setup<span style="color:#f92672">.</span>py bdist_wheel
+twine upload dist<span style="color:#f92672">/*</span>
+</code></pre></div><h5 id="更新成功"><em>更新成功!</em></h5>
+<p><img src="/images/courses/pypi-renew.png" alt=""></p>
 <hr>
-<h5 id="其實機器學習就是透過各種model進行數學統計的運算並進行優化">其實機器學習就是透過各種model進行數學統計的運算並進行優化。</h5>
-<h5 id="缺點是訓練和判斷的過程過度黑盒化導致我們很難完全信任ai的判斷結果然而機器學習的優勢也非常明顯它可以觀察到數據中容易被忽略或難以觀察到的點">缺點是訓練和判斷的過程過度黑盒化，導致我們很難完全信任AI的判斷結果。然而機器學習的優勢也非常明顯，它可以觀察到數據中容易被忽略或難以觀察到的點。</h5>
-<h5 id="在這大數據的時代統計學家都一致認為機器學習和神經網路絕對是未來重大的趨勢甚至在金融界也已經逐漸發展出非常優秀的ai選股策略囉">在這大數據的時代統計學家都一致認為機器學習和神經網路絕對是未來重大的趨勢，甚至在金融界也已經逐漸發展出非常優秀的AI選股策略囉!</h5>
+<h5 id="pypi-和-github-為不同專案的資料庫所以即使下載同一個套件也有可能安裝到不同版本的packages"><code>PYPI</code> 和 <code>GitHub</code> 為不同專案的資料庫，所以即使下載同一個套件也有可能安裝到不同版本的packages</h5>
+<ul>
+<li>
+<h5 id="pypi-安裝---pip-install-myproject">PYPI 安裝 &gt;  <code>pip install MyProject</code></h5>
+</li>
+<li>
+<h5 id="github-安裝--pip-install-githttpsgithubcomusermyprojectgit">GitHub 安裝 &gt; <code>pip install git+https://github.com/User/MyProject.git</code></h5>
+</li>
+</ul>
 
       </div>
       
@@ -480,45 +397,45 @@
       
       <div class="col-lg-4 col-sm-6 mb-5">
         <div class="card p-0 border-primary rounded-0 hover-shadow">
-  <img class="card-img-top rounded-0" src="/images/courses/pypi.png" alt="PYPI套件上傳教學">
+  <img class="card-img-top rounded-0" src="/images/courses/database.png" alt="建立專屬資料庫">
   <div class="card-body">
     <ul class="list-inline mb-2">
       <li class="list-inline-item"><i class="ti-calendar"></i> 06 Month</li>
       <li class="list-inline-item"><i class="ti-bookmark-alt"></i> Python</li>
     </ul>
-    <h4 class="card-title"><a href="https://finbrain-tw.github.io/course/pypi/">PYPI套件上傳教學</a></h4>
-    <p class="card-text mb-4">認識專案架構&amp;PYPI上傳更新</p>
-    <a href="https://finbrain-tw.github.io/course/pypi/" class="btn btn-primary btn-sm">Apply now</a>
+    <h4 class="card-title"><a href="https://finbrain-tw.github.io/course/database/">建立專屬資料庫</a></h4>
+    <p class="card-text mb-4">認識資料庫型態&amp;爬蟲自動化</p>
+    <a href="https://finbrain-tw.github.io/course/database/" class="btn btn-primary btn-sm">Apply now</a>
   </div>
 </div>
       </div>
       
       <div class="col-lg-4 col-sm-6 mb-5">
         <div class="card p-0 border-primary rounded-0 hover-shadow">
-  <img class="card-img-top rounded-0" src="/images/courses/python-basic.png" alt="Python快速入門">
+  <img class="card-img-top rounded-0" src="/images/courses/crawler.png" alt="Python網頁爬蟲教學">
   <div class="card-body">
     <ul class="list-inline mb-2">
       <li class="list-inline-item"><i class="ti-calendar"></i> 06 Month</li>
       <li class="list-inline-item"><i class="ti-bookmark-alt"></i> Python</li>
     </ul>
-    <h4 class="card-title"><a href="https://finbrain-tw.github.io/course/python-basic/">Python快速入門</a></h4>
-    <p class="card-text mb-4">Python基礎語法 &amp; Pandas應用</p>
-    <a href="https://finbrain-tw.github.io/course/python-basic/" class="btn btn-primary btn-sm">Apply now</a>
+    <h4 class="card-title"><a href="https://finbrain-tw.github.io/course/crawler/">Python網頁爬蟲教學</a></h4>
+    <p class="card-text mb-4">了解動態靜態網頁&amp;解析爬蟲技巧</p>
+    <a href="https://finbrain-tw.github.io/course/crawler/" class="btn btn-primary btn-sm">Apply now</a>
   </div>
 </div>
       </div>
       
       <div class="col-lg-4 col-sm-6 mb-5">
         <div class="card p-0 border-primary rounded-0 hover-shadow">
-  <img class="card-img-top rounded-0" src="/images/courses/visual.png" alt="Python數據視覺化">
+  <img class="card-img-top rounded-0" src="/images/courses/AI.png" alt="Python人工智慧">
   <div class="card-body">
     <ul class="list-inline mb-2">
       <li class="list-inline-item"><i class="ti-calendar"></i> 06 Month</li>
       <li class="list-inline-item"><i class="ti-bookmark-alt"></i> Python</li>
     </ul>
-    <h4 class="card-title"><a href="https://finbrain-tw.github.io/course/visual/">Python數據視覺化</a></h4>
-    <p class="card-text mb-4">超實用視覺化套件入門</p>
-    <a href="https://finbrain-tw.github.io/course/visual/" class="btn btn-primary btn-sm">Apply now</a>
+    <h4 class="card-title"><a href="https://finbrain-tw.github.io/course/ai/">Python人工智慧</a></h4>
+    <p class="card-text mb-4">認識機器學習&amp;神經網路</p>
+    <a href="https://finbrain-tw.github.io/course/ai/" class="btn btn-primary btn-sm">Apply now</a>
   </div>
 </div>
       </div>

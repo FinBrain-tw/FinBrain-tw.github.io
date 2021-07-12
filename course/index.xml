@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>COPYRIGHT © 2021 FinBrain-tw. ALL RIGHTS RESERVED.</copyright>
-    <lastBuildDate>Tue, 06 Jul 2021 15:27:17 +0800</lastBuildDate><atom:link href="https://finbrain-tw.github.io/course/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 09 Jul 2021 15:27:17 +0800</lastBuildDate><atom:link href="https://finbrain-tw.github.io/course/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PYPI套件上傳教學</title>
+      <link>https://finbrain-tw.github.io/course/pypi/</link>
+      <pubDate>Fri, 09 Jul 2021 15:27:17 +0800</pubDate>
+      
+      <guid>https://finbrain-tw.github.io/course/pypi/</guid>
+      <description>專案架構 Finbrain ------ FinBrain ----------------- __init__.py | | |-- requirements.txt |---- crawler.</description>
+    </item>
+    
     <item>
       <title>Python人工智慧</title>
       <link>https://finbrain-tw.github.io/course/ai/</link>

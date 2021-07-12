@@ -63,6 +63,15 @@
     </item>
     
     <item>
+      <title>PYPI套件上傳教學</title>
+      <link>https://finbrain-tw.github.io/course/pypi/</link>
+      <pubDate>Fri, 09 Jul 2021 15:27:17 +0800</pubDate>
+      
+      <guid>https://finbrain-tw.github.io/course/pypi/</guid>
+      <description>專案架構 Finbrain ------ FinBrain ----------------- __init__.py | | |-- requirements.txt |---- crawler.</description>
+    </item>
+    
+    <item>
       <title>Python人工智慧</title>
       <link>https://finbrain-tw.github.io/course/ai/</link>
       <pubDate>Tue, 06 Jul 2021 15:27:17 +0800</pubDate>
