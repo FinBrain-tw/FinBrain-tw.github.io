@@ -298,6 +298,51 @@
 </ul>
 <h5 id="選擇網址前置字元">選擇網址前置字元</h5>
 <p><img src="/images/courses/gsc.png" alt=""></p>
+<p>.</p>
+<h3 id="客制化設定">客制化設定</h3>
+<ul>
+<li>
+<h4 id="文章簡介設定">文章簡介設定</h4>
+</li>
+</ul>
+<h5 id="indexhtml">index.html:</h5>
+<h5 id="p-classcard-textsummary-p中-summary-description"><code>&lt;p class='card-text'&gt;{{.Summary}} &lt;/p&gt;</code>中 <code>.Summary</code>➜ <code>.Description</code></h5>
+<hr>
+<ul>
+<li>
+<h4 id="字型設定httpsfontsgooglecom"><a href="https://fonts.google.com/">字型設定</a></h4>
+</li>
+</ul>
+<h5 id="_mainscss">_main.scss:</h5>
+<p><img src="/images/courses/font.png" alt=""></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scss" data-lang="scss"><span style="color:#75715e">/* markdown */</span>
+<span style="color:#66d9ef">@import</span> <span style="color:#e6db74">url(&#39;https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&amp;display=swap&#39;)</span>;
+<span style="color:#a6e22e">.content</span> {
+    <span style="color:#f92672">*</span>{
+        <span style="color:#f92672">font-family</span><span style="color:#a6e22e">:</span><span style="color:#e6db74">&#39;Noto Sans TC&#39;</span>;
+    }
+    }
+</code></pre></div><hr>
+<ul>
+<li>
+<h4 id="特殊符號utf-8httpblognetendeposts333"><a href="http://blog.neten.de/posts/333/">特殊符號utf-8</a></h4>
+<p>✀ ✁ ✂ ✃ ✄ ✅ ✆ ✇ ✈ ✉ ✊ ✋ ✌ ✍ ✎ ✏ ✐ ✑ ✒ ✓ ✔ ✕ ✖ ✗ ✘ ✙ ✚ ✛ ✜ ✝ ✞ ✟ ✠ ✡ ✢ ✣ ✤ ✥ ✦ ✧ ✨ ✩ ✪ ✫ ✬ ✭ ✮ ✯ ✰ ✱ ✲ ✳ ✴ ✵ ✶ ✷ ✸ ✹ ✺ ✻ ✼ ✽ ✾ ✿ ❀ ❁ ❂ ❃ ❄ ❅ ❆ ❇ ❈ ❉ ❊ ❋ ❌ ❍ ❎ ❏ ❐ ❑ ❒ ❓ ❔ ❕ ❖ ❗ ❘ ❙ ❚ ❛ ❜ ❝ ❞ ❟ ❠ ❡ ❢ ❣ ❤ ❥ ❦ ❧ ❨ ❩ ❪ ❫ ❬ ❭ ❮ ❯ ❰ ❱ ❲ ❳ ❴ ❵ ❶ ❷ ❸ ❹ ❺ ❻ ❼ ❽ ❾ ❿ ➀ ➁ ➂ ➃ ➄ ➅ ➆ ➇ ➈ ➉ ➊ ➋ ➌ ➍ ➎ ➏ ➐ ➑ ➒ ➓ ➔ ➕ ➖ ➗ ➘ ➙ ➚ ➛ ➜ ➝ ➞ ➟ ➠ ➡ ➢ ➣ ➤ ➥ ➦ ➧ ➨ ➩ ➪ ➫ ➬ ➭ ➮ ➯ ➰ ➱ ➲ ➳ ➴ ➵ ➶ ➷ ➸ ➹ ➺ ➻ ➼ ➽ ➾ ➿ ① ② ③ ④ ⑤ ⑥ ⑦ ⑧ ⑨ ⑩ ⑪ ⑫ ⑬ ⑭ ⑮ ⑯ ⑰ ⑱ ⑲ ⑳ ⑴ ⑵ ⑶ ⑷ ⑸ ⑹ ⑺ ⑻ ⑼ ⑽ ⑾ ⑿ ⒀ ⒁ ⒂ ⒃ ⒄ ⒅ ⒆ ⒇ ⒈ ⒉ ⒊ ⒋ ⒌ ⒍ ⒎ ⒏ ⒐ ⒑ ⒒ ⒓ ⒔ ⒕ ⒖ ⒗ ⒘ ⒙ ⒚ ⒛ ⒜ ⒝ ⒞ ⒟ ⒠ ⒡ ⒢ ⒣ ⒤ ⒥ ⒦ ⒧ ⒨ ⒩ ⒪ ⒫ ⒬ ⒭ ⒮ ⒯ ⒰ ⒱ ⒲ ⒳ ⒴ ⒵ Ⓐ Ⓑ Ⓒ Ⓓ Ⓔ Ⓕ Ⓖ Ⓗ Ⓘ Ⓙ Ⓚ Ⓛ Ⓜ Ⓝ Ⓞ Ⓟ Ⓠ Ⓡ Ⓢ Ⓣ Ⓤ Ⓥ Ⓦ Ⓧ Ⓨ Ⓩ ⓐ ⓑ ⓒ ⓓ ⓔ ⓕ ⓖ ⓗ ⓘ ⓙ ⓚ ⓛ ⓜ ⓝ ⓞ ⓟ ⓠ ⓡ ⓢ ⓣ ⓤ ⓥ ⓦ ⓧ ⓨ ⓩ ⓪ ⓫ ⓬ ⓭ ⓮ ⓯ ⓰ ⓱ ⓲ ⓳ ⓴ ⓵ ⓶ ⓷ ⓸ ⓹ ⓺ ⓻ ⓼ ⓽ ⓾ ⓿ ─ ━ │ ┃ ┄ ┅ ┆ ┇ ┈ ┉ ┊ ┋ ┌ ┍ ┎ ┏ ┐ ┑ ┒ ┓ └ ┕ ┖ ┗ ┘ ┙ ┚ ┛ ├ ┝ ┞ ┟ ┠ ┡ ┢ ┣ ┤ ┥ ┦ ┧ ┨ ┩ ┪ ┫ ┬ ┭ ┮ ┯ ┰ ┱ ┲ ┳ ┴ ┵ ┶ ┷ ┸ ┹ ┺ ┻ ┼ ┽ ┾ ┿ ╀ ╁ ╂ ╃ ╄ ╅ ╆ ╇ ╈ ╉ ╊ ╋ ╌ ╍ ╎ ╏ ═ ║ ╒ ╓ ╔ ╕ ╖ ╗ ╘ ╙ ╚ ╛ ╜ ╝ ╞ ╟ ╠ ╡ ╢ ╣ ╤ ╥ ╦ ╧ ╨ ╩ ╪ ╫ ╬ ╭ ╮ ╯ ╰ ╱ ╲ ╳ ╴ ╵ ╶ ╷ ╸ ╹ ╺ ╻ ╼ ╽ ╾ ╿ ▀ ▁ ▂ ▃ ▄ ▅ ▆ ▇ █ ▉ ▊ ▋ ▌ ▍ ▎ ▏ ▐ ░ ▒ ▓ ▔ ▕ ▖ ▗ ▘</p>
+</li>
+</ul>
+<hr>
+<ul>
+<li>
+<h4 id="程式碼樣式httpsgohugoiogetting-startedconfiguration-markupreadout"><a href="https://gohugo.io/getting-started/configuration-markup#readout">程式碼樣式</a></h4>
+</li>
+</ul>
+<h5 id="版面樣本httpsxyprotogithubiosplashdocsallhtml"><em><a href="https://xyproto.github.io/splash/docs/all.html">版面樣本</a></em></h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#75715e">### config.toml</span>
+
+[markup]
+  [markup<span style="color:#f92672">.</span>highlight]
+    style <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;monokai&#34;</span> <span style="color:#75715e"># algol</span>
+</code></pre></div><hr>
+<h5 id="以上就是我架設finbrain-tw網站的所有秘密啦這些技巧也能應用在架設不同類型的網站像是個人部落格企業官網等等我覺得這算是目前架設網站最方便也最快速的方式了">以上就是我架設FinBrain-tw網站的所有秘密啦~這些技巧也能應用在架設不同類型的網站，像是個人部落格、企業官網等等，我覺得這算是目前架設網站最方便也最快速的方式了!</h5>
 
       </div>
       
@@ -353,15 +398,30 @@
       
       <div class="col-lg-4 col-sm-6 mb-5">
         <div class="card p-0 border-primary rounded-0 hover-shadow">
-  <img class="card-img-top rounded-0" src="/images/courses/visual.png" alt="Python數據視覺化">
+  <img class="card-img-top rounded-0" src="/images/courses/python-basic.png" alt="Python快速入門">
   <div class="card-body">
     <ul class="list-inline mb-2">
       <li class="list-inline-item"><i class="ti-calendar"></i> 06 Month</li>
       <li class="list-inline-item"><i class="ti-bookmark-alt"></i> Python</li>
     </ul>
-    <h4 class="card-title"><a href="https://finbrain-tw.github.io/course/visual/">Python數據視覺化</a></h4>
-    <p class="card-text mb-4">超實用視覺化套件入門</p>
-    <a href="https://finbrain-tw.github.io/course/visual/" class="btn btn-primary btn-sm">Apply now</a>
+    <h4 class="card-title"><a href="https://finbrain-tw.github.io/course/python-basic/">Python快速入門</a></h4>
+    <p class="card-text mb-4">Python基礎語法 &amp; Pandas應用</p>
+    <a href="https://finbrain-tw.github.io/course/python-basic/" class="btn btn-primary btn-sm">Apply now</a>
+  </div>
+</div>
+      </div>
+      
+      <div class="col-lg-4 col-sm-6 mb-5">
+        <div class="card p-0 border-primary rounded-0 hover-shadow">
+  <img class="card-img-top rounded-0" src="/images/courses/env-packages.png" alt="如何架設Python環境">
+  <div class="card-body">
+    <ul class="list-inline mb-2">
+      <li class="list-inline-item"><i class="ti-calendar"></i> 06 Month</li>
+      <li class="list-inline-item"><i class="ti-bookmark-alt"></i> Python</li>
+    </ul>
+    <h4 class="card-title"><a href="https://finbrain-tw.github.io/course/env-packages/">如何架設Python環境</a></h4>
+    <p class="card-text mb-4">建立環境 &amp; 安裝套件</p>
+    <a href="https://finbrain-tw.github.io/course/env-packages/" class="btn btn-primary btn-sm">Apply now</a>
   </div>
 </div>
       </div>
@@ -377,21 +437,6 @@
     <h4 class="card-title"><a href="https://finbrain-tw.github.io/course/ai/">Python人工智慧</a></h4>
     <p class="card-text mb-4">認識機器學習&amp;神經網路</p>
     <a href="https://finbrain-tw.github.io/course/ai/" class="btn btn-primary btn-sm">Apply now</a>
-  </div>
-</div>
-      </div>
-      
-      <div class="col-lg-4 col-sm-6 mb-5">
-        <div class="card p-0 border-primary rounded-0 hover-shadow">
-  <img class="card-img-top rounded-0" src="/images/courses/pypi.png" alt="PYPI套件上傳教學">
-  <div class="card-body">
-    <ul class="list-inline mb-2">
-      <li class="list-inline-item"><i class="ti-calendar"></i> 06 Month</li>
-      <li class="list-inline-item"><i class="ti-bookmark-alt"></i> Python</li>
-    </ul>
-    <h4 class="card-title"><a href="https://finbrain-tw.github.io/course/pypi/">PYPI套件上傳教學</a></h4>
-    <p class="card-text mb-4">認識專案架構&amp;PYPI上傳更新</p>
-    <a href="https://finbrain-tw.github.io/course/pypi/" class="btn btn-primary btn-sm">Apply now</a>
   </div>
 </div>
       </div>
